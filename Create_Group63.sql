@@ -1,1 +1,5 @@
 /* Create_Group63.sql */
+
+CREATE DATABASE IF NOT EXISTS CTSDB;
+
+USE CTSDB;

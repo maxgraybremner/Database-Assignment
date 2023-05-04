@@ -1,6 +1,2 @@
 # Database-Assignment-
 ** please remember to convert the sql files into txt before submission **
-
-uwu~
-
-(ノ・∀・)ノ

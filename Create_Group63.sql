@@ -148,4 +148,31 @@ CREATE TABLE IF NOT EXISTS LOCATION(
         REFERENCES LOCATION_TYPE(LocTypeID)
 ) ENGINE=Innodb;
 
-CREATE TABLE IF NOT EXISTS TRIP() ENGINE=Innodb;
+CREATE TABLE IF NOT EXISTS TRIP(
+    BookingRefNum INT AUTO_INCREMENT,
+    DriverLicenceNum CHAR(12),
+    OfficialID CHAR(8),
+    LanguageCode CHAR(2),
+    PickUpLocID INT,
+    DropOffLocID INT,
+    VIN CHAR(17),
+    StartTimeIntended DATETIME,
+    EndTimeIntended DATETIME,
+    StartTimeActual DATETIME, 
+    EndTimeActual DATETIME,
+    StartOdometerKM INT,
+    EndOdometerKM INT,
+    PRIMARY KEY (BookingRefNum),
+    FOREIGN KEY (DriverLicenceNum)
+        REFERENCES DRIVER(DriverLicenceNum),
+    FOREIGN KEY (OfficialID)
+        REFERENCES OFFICIAL_LANGAUGE(OfficialID),
+    FOREIGN KEY (LanguageCode)
+        REFERENCES OFFICIAL_LANGAUGE(LanguageCode),
+    FOREIGN KEY (PickUpLocID)
+        REFERENCES LOCATION(LocationID),
+    FOREIGN KEY (DropOffLocID)
+        REFERENCES LOCATION(LocationID),
+    FOREIGN KEY (VIN)
+        REFERENCES VEHICLE(VIN)
+) ENGINE=Innodb;

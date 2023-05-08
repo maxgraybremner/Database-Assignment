@@ -57,12 +57,12 @@ CREATE TABLE IF NOT EXISTS MAINTENANCE_REPAIR(
 ) ENGINE=Innodb;
 
 CREATE TABLE IF NOT EXISTS DRIVER(
-    DriverLicenceNum CHAR(12),
+    DriverLicenseNum CHAR(12),
     DriverFirstName VARCHAR(40),
     DriverLastName VARCHAR(40),
     ClearanceLevel CHAR(1),
     IsAvailable CHAR(1),
-    PRIMARY KEY (DriverLicenceNum)
+    PRIMARY KEY (DriverLicenseNum)
 ) ENGINE=Innodb;
 
 CREATE TABLE IF NOT EXISTS LANGUAGE(
@@ -109,13 +109,13 @@ CREATE TABLE IF NOT EXISTS COUNTRY_LANGUAGE(
 
 CREATE TABLE IF NOT EXISTS DRIVER_LANGUAGE(
     LanguageCode CHAR(2),
-    DriverLicenceNum CHAR(12),
+    DriverLicenseNum CHAR(12),
     DriverLanguageProf CHAR(1),
-    PRIMARY KEY (LanguageCode, DriverLicenceNum),
+    PRIMARY KEY (LanguageCode, DriverLicenseNum),
     FOREIGN KEY (LanguageCode)
         REFERENCES LANGUAGE(LanguageCode),
-    FOREIGN KEY (DriverLicenceNum)
-        REFERENCES DRIVER(DriverLicenceNum)
+    FOREIGN KEY (DriverLicenseNum)
+        REFERENCES DRIVER(DriverLicenseNum)
 ) ENGINE=Innodb;
 
 CREATE TABLE IF NOT EXISTS OFFICIAL_LANGAUGE(
@@ -150,7 +150,7 @@ CREATE TABLE IF NOT EXISTS LOCATION(
 
 CREATE TABLE IF NOT EXISTS TRIP(
     BookingRefNum INT AUTO_INCREMENT,
-    DriverLicenceNum CHAR(12),
+    DriverLicenseNum CHAR(12),
     OfficialID CHAR(8),
     LanguageCode CHAR(2),
     PickUpLocID INT,
@@ -163,12 +163,12 @@ CREATE TABLE IF NOT EXISTS TRIP(
     StartOdometerKM INT,
     EndOdometerKM INT,
     PRIMARY KEY (BookingRefNum),
-    FOREIGN KEY (DriverLicenceNum)
-        REFERENCES DRIVER(DriverLicenceNum),
+    FOREIGN KEY (DriverLicenseNum)
+        REFERENCES DRIVER(DriverLicenseNum),
     FOREIGN KEY (OfficialID)
         REFERENCES OFFICIAL_LANGAUGE(OfficialID),
     FOREIGN KEY (LanguageCode)
-        REFERENCES OFFICIAL_LANGAUGE(LanguageCode),
+        REFERENCES LANGUAGE(LanguageCode),
     FOREIGN KEY (PickUpLocID)
         REFERENCES LOCATION(LocationID),
     FOREIGN KEY (DropOffLocID)

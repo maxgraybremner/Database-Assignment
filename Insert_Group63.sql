@@ -1,29 +1,178 @@
-INSERT INTO VEHICLE (VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo)
-VALUES ('Y734H348E051B7592', '09', 'Toyota', 'Corolla', '2018', 'White', '129FBH', 34509, 'Y', 'Y', 'N');
+/* Insert_Group63.sql */
 
-INSERT INTO PASSENGER_VEHICLE (VIN, Pass_seat_capacity)
-VALUES ('Y734H348E051B7592', 5);
+USE CTSDB;
 
-INSERT INTO CARGO_VEHICLE (VIN, Carg_cfeet_capacity, Carg_tons_capacity)
-VALUES ('Y734H348E051B7592', 100, 2.5);
+INSERT INTO VEHICLE_TYPE(Veh_TypeID, Veh_Type_Description)
+    VALUES('se', 'sedan'),
+    ('ha', 'hatchback'),
+    ('bt', 'boxtruck'),
+    ('uv', 'utility vehicle'),
+    ('va', 'van'),
+    ('pm', 'people mover');
 
-INSERT INTO MAINTENANCE_REPAIR (VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail)
-VALUES ('Y734H348E051B7592', 34509, 'Tires', '2023-04-01', 189.00, 'Tire change and rotation');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo)
+    VALUES('WBA7T2C02LCD06343', 'se', 'BMW', '7 Series', '2020', 'silver', '921GQ3', 5984, 'y', 'y', 'n'),
+    ('WBS3U920X0J966829', 'se', 'BMW', '3 Series', '2019', 'black', '241KST', 23984, 'y', 'y', 'n'),
+    ('WAUZZZ8V5G1048824', 'se', 'Audi', 'A5', '2018', 'black', '841GD5', 85846, 'n', 'y', 'n'),
+    ('W1W8ED6Y7LP320845', 'va', 'Mercedes-Benz', 'Sprinter', '2019', 'white', '699KJB',47154, 'y', 'n', 'y'),
+    ('WDF9066352E036011', 'pm', 'Mercedes-Benz', 'Sprinter', '2019', 'white', '656GB5', 18126, 'y', 'y', 'n'),
+    ('WDF9066352E086788', 'pm', 'Mercedes-Benz', 'Sprinter', '2019', 'black', '886CH8', 23156, 'n', 'y', 'n'),
+    ('JHDFM8JR1XXX10152', 'bt', 'Hino', '300 Series', '2016', 'white', 'XQZ4CH', 125684, 'y', 'n', 'y'),
+    ('JHDFC2AG1XXX10349', 'bt', 'Hino', '300 Series', '2016', 'white', '235EDO', 184693, 'n', 'n', 'y'),
+    ('JHDFC2AG1XXX10594', 'bt', 'Hino', '300 Series', '2017', 'white', '331TFT', 155811, 'y', 'n', 'y'),
+    ('MR0HA3CD400387900', 'uv', 'Toyota', 'Hilux', '2017', 'white', '233XOR', 90545, 'y', 'y', 'y'),
+    ('MR0HA3CD400355234', 'uv', 'Toyota', 'Hilux', '2017', 'white', '234XOR', 84569, 'n', 'y', 'y'),
+    ('MR0HA3CD400323564', 'uv', 'Toyota', 'Hilux', '2017', 'white', '235XOR', 112556, 'n', 'y', 'y'),
+    ('KMHH351EMNU176947', 'ha', 'Hyundai', 'i30', '2022', 'white', '166GU8', 32565, 'n', 'y', 'n'),
+    ('KMHH351EMNU156489', 'ha', 'Hyundai', 'i30', '2022', 'black', '348FR3', 74859, 'n', 'y', 'n'),
+    ('KMHH351EMNU122345', 'ha', 'Hyundai', 'i30', '2022', 'black', '595FI3', 12457, 'y', 'y', 'n');
 
-INSERT INTO DRIVER (DriverLicenceNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable)
-VALUES ('1452892345', 'Jack', 'Downs', 'A', 'Y');
+INSERT INTO PASSENGER_VEHICLE(VIN, Pass_seat_capacity)
+    VALUES('WBA7T2C02LCD06343', 5),
+    ('WBS3U920X0J966829', 5),
+    ('WAUZZZ8V5G1048824', 5),
+    ('WDF9066352E036011', 12),
+    ('WDF9066352E086788', 12),
+    ('MR0HA3CD400387900', 4),
+    ('MR0HA3CD400355234', 4),
+    ('MR0HA3CD400323564', 4),
+    ('KMHH351EMNU176947', 5),
+    ('KMHH351EMNU156489', 5),
+    ('KMHH351EMNU122345', 5);
 
-INSERT INTO LANGUAGE (LanguageCode, LanguageName)
-VALUES ('en', 'English');
 
-INSERT INTO COUNTRY (CountryCode, CountryName)
-VALUES ('UK', 'United Kingdom');
+INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity)
+    VALUES('W1W8ED6Y7LP320845', 71, 4.1),
+    ('JHDFM8JR1XXX10152', 89, 4.5),
+    ('JHDFC2AG1XXX10349', 89, 4.5),
+    ('JHDFC2AG1XXX10594', 89, 4.5),
+    ('MR0HA3CD400387900', 43, 3.2),
+    ('MR0HA3CD400355234', 43, 3.2),
+    ('MR0HA3CD400323564', 43, 3.2);
 
-INSERT INTO OFFICIAL_ROLE (RoleID, RoleDescription)
-VALUES ('08', 'Driver');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail)
+    VALUES('WBS3U920X0J966829', 23984, 'm', '2023-06-02', 1163.75, '20,000km inspection'),
+    ('WDF9066352E036011', 18126, 'r', '2023-05-18', 240,'Air-Conditioning is not cold and engine fan full speed'),
+    ('JHDFM8JR1XXX10152', 125684, 'm', '2023-05-29', 831, '125,000km service and investogate shudder when changin gears'),
+    ('MR0HA3CD400355234', 84569, 'r', '2023-05-11', 320, 'Investigate intermittently blowing white smoke while driving on the highway'),
+    ('KMHH351EMNU176947', 32565, 'm', '2023-05-12', 596.99, '30,000km service and an issue during cold start.');
 
-INSERT INTO OFFICIAL (OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName)
-VALUES ('O9176234', '08', 'AU', 'Darcy', 'Reilly');
+INSERT INTO DRIVER(DriverLicenceNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable)
+    VALUES('PPQ5I09LZNYU', 'Agnes', 'Wauters', 2, 'n'),
+('WFU6TKIW97RQ', 'Mitra', 'Brownlow', 3, 'y'),
+('V3R9FM7PX5RR', 'Normand', 'Fontana', 1, 'n'),
+('P7IYXITZINK3', 'Chetan', 'Molloy', 3, 'n'),
+('KS3GI45FXI0N', 'Suzana', 'Adamsen', 2, 'y'),
+('7NXIYPNVYOHD', 'Shalmaneser', 'Morison', 1, 'y'),
+('G16W6R6OUELF', 'Judita', 'Paul', 4, 'n'),
+('UZ4B2RHA6U62', 'Rukmini', 'Brioschi', 4, 'n'),
+('97E29S93TMUS', 'Glafira', 'Jacquet', 2, 'n'),
+('OUW35JY1U8BW', 'Darragh', 'Aliprandi', 3, 'n');
 
-INSERT INTO COUNTRY_LANGUAGE (CountryCode, LanguageCode, PercentageSpoken)
-VALUES ('US', 'en', 80.0);
+INSERT INTO LANGUAGE(LanguageName, LanguageCode)
+    VALUES("Abkhazian", "ab"), ("Afar", "aa"), ("Afrikaans", "af"), ("Akan", "ak"), ("Albanian", "sq"), ("Amharic", "am"), ("Arabic", "ar"), ("Aragonese", "an"), ("Armenian", "hy"), ("Assamese", "as"), ("Avaric", "av"), ("Avestan", "ae"), ("Aymara", "ay"), ("Azerbaijani", "az"), ("Bambara", "bm"), ("Bashkir", "ba"), ("Basque", "eu"), ("Belarusian", "be"), ("Bengali", "bn"), ("Bislama", "bi"), ("Bosnian", "bs"), ("Breton", "br"), ("Bulgarian", "bg"), ("Burmese", "my"), ("Catalan, Valencian", "ca"), ("Chamorro", "ch"), ("Chechen", "ce"), ("Chichewa, Chewa, Nyanja", "ny"), ("Chinese", "zh"), ("Church Slavonic, Old Slavonic, Old Church Slavonic", "cu"), ("Chuvash", "cv"), ("Cornish", "kw"), ("Corsican", "co"), ("Cree", "cr"), ("Croatian", "hr"), ("Czech", "cs"), ("Danish", "da"), ("Divehi, Dhivehi, Maldivian", "dv"), ("Dutch, Flemish", "nl"), 
+    ("Dzongkha", "dz"), ("English", "en"), ("Esperanto", "eo"), ("Estonian", "et"), ("Ewe", "ee"), ("Faroese", "fo"), ("Fijian", "fj"), ("Finnish", "fi"), ("French", "fr"), ("Western Frisian", "fy"), ("Fulah", "ff"), ("Gaelic, Scottish Gaelic", "gd"), ("Galician", "gl"), ("Ganda", "lg"), ("Georgian", "ka"), ("German", "de"), ("Greek, Modern (1453–)", "el"), ("Kalaallisut, Greenlandic", "kl"), ("Guarani", "gn"), ("Gujarati", "gu"), ("Haitian, Haitian Creole", "ht"), ("Hausa", "ha"), ("Hebrew", "he"), ("Herero", "hz"), ("Hindi", "hi"), ("Hiri Motu", "ho"), ("Hungarian", "hu"), ("Icelandic", "is"), ("Ido", "io"), ("Igbo", "ig"), ("Indonesian", "id"), ("Interlingua (International Auxiliary Language Association)", "ia"), ("Interlingue, Occidental", "ie"), ("Inuktitut", "iu"), ("Inupiaq", "ik"), ("Irish", "ga"), ("Italian", "it"), ("Japanese", "ja"), 
+    ("Javanese", "jv"), ("Kannada", "kn"), ("Kanuri", "kr"), ("Kashmiri", "ks"), ("Kazakh", "kk"), ("Central Khmer", "km"), ("Kikuyu, Gikuyu", "ki"), ("Kinyarwanda", "rw"), ("Kirghiz, Kyrgyz", "ky"), ("Komi", "kv"), ("Kongo", "kg"), ("Korean", "ko"), ("Kuanyama, Kwanyama", "kj"), ("Kurdish", "ku"), ("Lao", "lo"), ("Latin", "la"), ("Latvian", "lv"), ("Limburgan, Limburger, Limburgish", "li"), ("Lingala", "ln"), ("Lithuanian", "lt"), ("Luba-Katanga", "lu"), ("Luxembourgish, Letzeburgesch", "lb"), ("Macedonian", "mk"), ("Malagasy", "mg"), ("Malay", "ms"), ("Malayalam", "ml"), ("Maltese", "mt"), ("Manx", "gv"), ("Maori", "mi"), ("Marathi", "mr"), ("Marshallese", "mh"), ("Mongolian", "mn"), ("Nauru", "na"), ("Navajo, Navaho", "nv"), ("North Ndebele", "nd"), ("South Ndebele", "nr"), ("Ndonga", "ng"), ("Nepali", "ne"), ("Norwegian", "no"), 
+    ("Norwegian Bokmål", "nb"), ("Norwegian Nynorsk", "nn"), ("Sichuan Yi, Nuosu", "ii"), ("Occitan", "oc"), ("Ojibwa", "oj"), ("Oriya", "or"), ("Oromo", "om"), ("Ossetian, Ossetic", "os"), ("Pali", "pi"), ("Pashto, Pushto", "ps"), ("Persian", "fa"), ("Polish", "pl"), ("Portuguese", "pt"), ("Punjabi, Panjabi", "pa"), ("Quechua", "qu"), ("Romanian, Moldavian, Moldovan", "ro"), ("Romansh", "rm"), ("Rundi", "rn"), ("Russian", "ru"), ("Northern Sami", "se"), ("Samoan", "sm"), ("Sango", "sg"), ("Sanskrit", "sa"), ("Sardinian", "sc"), ("Serbian", "sr"), ("Shona", "sn"), ("Sindhi", "sd"), ("Sinhala, Sinhalese", "si"), ("Slovak", "sk"), ("Slovenian", "sl"), ("Somali", "so"), ("Southern Sotho", "st"), ("Spanish, Castilian", "es"), ("Sundanese", "su"), ("Swahili", "sw"), ("Swati", "ss"), ("Swedish", "sv"), ("Tagalog", "tl"), ("Tahitian", "ty"), ("Tajik", "tg"), 
+    ("Tamil", "ta"), ("Tatar", "tt"), ("Telugu", "te"), ("Thai", "th"), ("Tibetan", "bo"), ("Tigrinya", "ti"), ("Tonga (Tonga Islands)", "to"), ("Tsonga", "ts"), ("Tswana", "tn"), ("Turkish", "tr"), ("Turkmen", "tk"), ("Twi", "tw"), ("Uighur, Uyghur", "ug"), ("Ukrainian", "uk"), ("Urdu", "ur"), ("Uzbek", "uz"), ("Venda", "ve"), ("Vietnamese", "vi"), ("Volapük", "vo"), ("Walloon", "wa"), ("Welsh", "cy"), ("Wolof", "wo"), ("Xhosa", "xh"), ("Yiddish", "yi"), ("Yoruba", "yo"), ("Zhuang, Chuang", "za"), 
+    ("Zulu", "zu");
+
+
+INSERT INTO COUNTRY(CountryName, CountryCode)
+    VALUES("Australia", "AU"),
+    ("Canada", "CA"),
+    ("Colombia", "CO"),
+    ("Egypt", "EG"),
+    ("Israel", "IL"),
+    ("Italy", "IT"),
+    ("Serbia", "RS"),
+    ("Spain", "ES"),
+    ("Tonga", "TO"),
+    ("Zimbabwe", "ZW"); 
+
+
+
+INSERT INTO OFFICIAL_ROLE(roleID, roleDescription)
+    VALUES(),
+    (),
+    (),
+    (),
+    ();
+    
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName)
+    VALUES('ND9N4T8L', "AU", 'Jolie', 'Cullen'),
+('IT7YN37F', "CA", 'Valerie', 'Rose'),
+('9KY8GJFP', "CO", 'Andrés', 'Valdez'),
+('Z2J3OWJ7', "EG", 'Amani', 'Zaman'),
+('6P79BNKI', "IL", 'Samia', 'Muhammad'),
+('ZRFG65JG', "IT", 'Palmiro', 'Cattaneo'),
+('S8OATL1F', "RS", 'Srećko', 'Tomić'),
+('RQG16IZV', "ES", 'Amador', 'Trujillo'),
+('T5YMTFPG', "TO", 'Tevita', 'Chen'),
+('F9336KVE', "ZW", 'Kofi', 'Kamau'); 
+
+INSERT IGNORE INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken)
+    VALUES("AU", 'en', 72),
+    ("AU", 'zh', 3.9),
+    ("AU", 'ar', 1.4),
+    ("AU", 'vi', 1.3), 
+    ("CA", 'en', 98),
+    ("CA", 'fr', 22.8),
+    ("CA", 'zh', 12.4),
+    ("CA", 'pa', 2.6),
+    ("CO", 'es', 99.5),
+    ("CO", 'en', 3.82), 
+    ("EG", 'ar', 78),
+    ("EG", 'en', 39.98),
+    ("IL", 'en', 84.97),
+    ("IL", 'he', 53),
+    ("IL", 'ar', 20.9),
+    ("IT", 'it', 97.41),
+    ("IT", 'en', 13.74),
+    ("IT", 'fr', 8.46),
+    ("IT", 'es', 6.56),
+    ("RS", 'sr',98),
+    ("ES", 'es', 98),
+    ("ES", 'en', 11.7),
+    ("ES", 'fr', 5.85),
+    ("ES", 'ro', 2.78),
+    ("ES", 'it', 1.93),
+    ("TO", 'to', 80.5),
+    ("TO", 'en', 15.4), 
+    ("ZW", 'en', 61.7),
+    ("ZW", 'sn', 29); 
+
+INSERT INTO DRIVER_LANGUAGE()
+    VALUES(),
+    (),
+    (),
+    (),
+    ();
+
+INSERT INTO OFFICIAL_LANGAUGE()
+    VALUES(),
+    (),
+    (),
+    (),
+    ();
+
+INSERT INTO LOCATION_TYPE()
+    VALUES(),
+    (),
+    (),
+    (),
+    ();
+
+INSERT INTO LOCATION()
+    VALUES(),
+    (),
+    (),
+    (),
+    ();
+
+INSERT INTO TRIP()
+    VALUES(),
+    (),
+    (),
+    (),
+    ();

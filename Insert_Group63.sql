@@ -101,15 +101,15 @@ INSERT INTO OFFICIAL_ROLE(roleID, roleDescription)
     
 INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName)
     VALUES('ND9N4T8L', "AU", 'Jolie', 'Cullen'),
-('IT7YN37F', "CA", 'Valerie', 'Rose'),
-('9KY8GJFP', "CO", 'Andrés', 'Valdez'),
-('Z2J3OWJ7', "EG", 'Amani', 'Zaman'),
-('6P79BNKI', "IL", 'Samia', 'Muhammad'),
-('ZRFG65JG', "IT", 'Palmiro', 'Cattaneo'),
-('S8OATL1F', "RS", 'Srećko', 'Tomić'),
-('RQG16IZV', "ES", 'Amador', 'Trujillo'),
-('T5YMTFPG', "TO", 'Tevita', 'Chen'),
-('F9336KVE', "ZW", 'Kofi', 'Kamau'); 
+    ('IT7YN37F', "CA", 'Valerie', 'Rose'),
+    ('9KY8GJFP', "CO", 'Andrés', 'Valdez'),
+    ('Z2J3OWJ7', "EG", 'Amani', 'Zaman'),
+    ('6P79BNKI', "IL", 'Samia', 'Muhammad'),
+    ('ZRFG65JG', "IT", 'Palmiro', 'Cattaneo'),
+    ('S8OATL1F', "RS", 'Srećko', 'Tomić'),
+    ('RQG16IZV', "ES", 'Amador', 'Trujillo'),
+    ('T5YMTFPG', "TO", 'Tevita', 'Chen'),
+    ('F9336KVE', "ZW", 'Kofi', 'Kamau'); 
 
 INSERT IGNORE INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken)
     VALUES("AU", 'en', 72),

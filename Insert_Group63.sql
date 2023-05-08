@@ -57,17 +57,17 @@ INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, 
     ('MR0HA3CD400355234', 84569, 'r', '2023-05-11', 320, 'Investigate intermittently blowing white smoke while driving on the highway'),
     ('KMHH351EMNU176947', 32565, 'm', '2023-05-12', 596.99, '30,000km service and an issue during cold start.');
 
-INSERT INTO DRIVER(DriverLicenceNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable)
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable)
     VALUES('PPQ5I09LZNYU', 'Agnes', 'Wauters', 2, 'n'),
-('WFU6TKIW97RQ', 'Mitra', 'Brownlow', 3, 'y'),
-('V3R9FM7PX5RR', 'Normand', 'Fontana', 1, 'n'),
-('P7IYXITZINK3', 'Chetan', 'Molloy', 3, 'n'),
-('KS3GI45FXI0N', 'Suzana', 'Adamsen', 2, 'y'),
-('7NXIYPNVYOHD', 'Shalmaneser', 'Morison', 1, 'y'),
-('G16W6R6OUELF', 'Judita', 'Paul', 4, 'n'),
-('UZ4B2RHA6U62', 'Rukmini', 'Brioschi', 4, 'n'),
-('97E29S93TMUS', 'Glafira', 'Jacquet', 2, 'n'),
-('OUW35JY1U8BW', 'Darragh', 'Aliprandi', 3, 'n');
+    ('WFU6TKIW97RQ', 'Mitra', 'Brownlow', 3, 'y'),
+    ('V3R9FM7PX5RR', 'Normand', 'Fontana', 1, 'n'),
+    ('P7IYXITZINK3', 'Chetan', 'Molloy', 3, 'n'),
+    ('KS3GI45FXI0N', 'Suzana', 'Adamsen', 2, 'y'),
+    ('7NXIYPNVYOHD', 'Shalmaneser', 'Morison', 1, 'y'),
+    ('G16W6R6OUELF', 'Judita', 'Paul', 4, 'n'),
+    ('UZ4B2RHA6U62', 'Rukmini', 'Brioschi', 4, 'n'),
+    ('97E29S93TMUS', 'Glafira', 'Jacquet', 2, 'n'),
+    ('OUW35JY1U8BW', 'Darragh', 'Aliprandi', 3, 'n');
 
 INSERT INTO LANGUAGE(LanguageName, LanguageCode)
     VALUES("Abkhazian", "ab"), ("Afar", "aa"), ("Afrikaans", "af"), ("Akan", "ak"), ("Albanian", "sq"), ("Amharic", "am"), ("Arabic", "ar"), ("Aragonese", "an"), ("Armenian", "hy"), ("Assamese", "as"), ("Avaric", "av"), ("Avestan", "ae"), ("Aymara", "ay"), ("Azerbaijani", "az"), ("Bambara", "bm"), ("Bashkir", "ba"), ("Basque", "eu"), ("Belarusian", "be"), ("Bengali", "bn"), ("Bislama", "bi"), ("Bosnian", "bs"), ("Breton", "br"), ("Bulgarian", "bg"), ("Burmese", "my"), ("Catalan, Valencian", "ca"), ("Chamorro", "ch"), ("Chechen", "ce"), ("Chichewa, Chewa, Nyanja", "ny"), ("Chinese", "zh"), ("Church Slavonic, Old Slavonic, Old Church Slavonic", "cu"), ("Chuvash", "cv"), ("Cornish", "kw"), ("Corsican", "co"), ("Cree", "cr"), ("Croatian", "hr"), ("Czech", "cs"), ("Danish", "da"), ("Divehi, Dhivehi, Maldivian", "dv"), ("Dutch, Flemish", "nl"), 
@@ -90,28 +90,27 @@ INSERT INTO COUNTRY(CountryName, CountryCode)
     ("Tonga", "TO"),
     ("Zimbabwe", "ZW"); 
 
-
-
 INSERT INTO OFFICIAL_ROLE(roleID, roleDescription)
-    VALUES(),
-    (),
-    (),
-    (),
-    ();
+    VALUES('EC', 'Event Co-ordinator'),
+    ('TO', 'Team Organiser'),
+    ('BM', 'Board Member'),
+    ('SO', 'Swimming Official'),
+    ('MA', 'Marshal');
+    
     
 INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName)
-    VALUES('ND9N4T8L', "AU", 'Jolie', 'Cullen'),
-    ('IT7YN37F', "CA", 'Valerie', 'Rose'),
-    ('9KY8GJFP', "CO", 'Andrés', 'Valdez'),
-    ('Z2J3OWJ7', "EG", 'Amani', 'Zaman'),
-    ('6P79BNKI', "IL", 'Samia', 'Muhammad'),
-    ('ZRFG65JG', "IT", 'Palmiro', 'Cattaneo'),
-    ('S8OATL1F', "RS", 'Srećko', 'Tomić'),
-    ('RQG16IZV', "ES", 'Amador', 'Trujillo'),
-    ('T5YMTFPG', "TO", 'Tevita', 'Chen'),
-    ('F9336KVE', "ZW", 'Kofi', 'Kamau'); 
+    VALUES('ND9N4T8L', 'TO', "AU", 'Jolie', 'Cullen'),
+    ('IT7YN37F', 'BM',"CA", 'Valerie', 'Rose'),
+    ('9KY8GJFP', 'BM',"CO", 'Andrés', 'Valdez'),
+    ('Z2J3OWJ7', 'TO', "EG", 'Amani', 'Zaman'),
+    ('6P79BNKI', 'EC',"IL", 'Samia', 'Muhammad'),
+    ('ZRFG65JG', 'SO',"IT", 'Palmiro', 'Cattaneo'),
+    ('S8OATL1F', 'EC',"RS", 'Srećko', 'Tomić'),
+    ('RQG16IZV', 'SO',"ES", 'Amador', 'Trujillo'),
+    ('T5YMTFPG', 'MA',"TO", 'Tevita', 'Chen'),
+    ('F9336KVE', 'MA',"ZW", 'Kofi', 'Kamau'); 
 
-INSERT IGNORE INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken)
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken)
     VALUES("AU", 'en', 72),
     ("AU", 'zh', 3.9),
     ("AU", 'ar', 1.4),
@@ -142,37 +141,69 @@ INSERT IGNORE INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken)
     ("ZW", 'en', 61.7),
     ("ZW", 'sn', 29); 
 
-INSERT INTO DRIVER_LANGUAGE()
-    VALUES(),
-    (),
-    (),
-    (),
-    ();
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf)
+    VALUES('EN','WFU6TKIW97RQ','2'),
+    ('FR','WFU6TKIW97RQ','5'),
+    ('zh','WFU6TKIW97RQ','4'),
+    ('en','V3R9FM7PX5RR','2'),
+    ('es','V3R9FM7PX5RR','1'),
+    ('sn','V3R9FM7PX5RR','2'),
+    ('to','V3R9FM7PX5RR','3'),
+    ('en','P7IYXITZINK3','5'),
+    ('fr','P7IYXITZINK3','3'),
+    ('sn','P7IYXITZINK3','2'),
+    ('en','KS3GI45FXI0N','2'),
+    ('sr','KS3GI45FXI0N','4'),
+    ('ar','KS3GI45FXI0N','3'),
+    ('pa','KS3GI45FXI0N','1'),
+    ('to','7NXIYPNVYOHD','4'),
+    ('pa','7NXIYPNVYOHD','1'),
+    ('zh','7NXIYPNVYOHD','5'),
+    ('en','G16W6R6OUELF','3'),
+    ('vi','G16W6R6OUELF','1'),
+    ('he','G16W6R6OUELF','3'),
+    ('it','UZ4B2RHA6U62','2'),
+    ('en','UZ4B2RHA6U62','3'),
+    ('to','UZ4B2RHA6U62','5'),
+    ('fr','97E29S93TMUS','1'),
+    ('es','97E29S93TMUS','3'),
+    ('it','97E29S93TMUS','5'),
+    ('ar','OUW35JY1U8BW','2'),
+    ('vi','OUW35JY1U8BW','5'),
+    ('he','OUW35JY1U8BW','1');
 
-INSERT INTO OFFICIAL_LANGAUGE()
-    VALUES(),
-    (),
-    (),
-    (),
-    ();
+INSERT INTO OFFICIAL_LANGAUGE (OfficialID, LanguageCode, Off_Lang_Preference)
+    VALUES('ND9N4T8L','en','2'),
+    ('IT7YN37F','en','5'),
+    ('9KY8GJFP','fr','2'),
+    ('Z2J3OWJ7','en','3'),
+    ('6P79BNKI','fr','4'),
+    ('ZRFG65JG','en','2'),
+    ('S8OATL1F','en','1'),
+    ('RQG16IZV','fr','4'),
+    ('T5YMTFPG','en','2'),
+    ('F9336KVE','fr','1');
 
-INSERT INTO LOCATION_TYPE()
-    VALUES(),
-    (),
-    (),
-    (),
-    ();
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription)
+    VALUES('02', 'Booking Office'),
+       ('00', 'Head Office'),
+       ('04', 'Car Park'),
+       ('09', 'Warehouse'),
+       ('23', 'Guzman y Gomez');
 
-INSERT INTO LOCATION()
-    VALUES(),
-    (),
-    (),
-    (),
-    ();
+INSERT INTO LOCATION (LocationTypeID, StreetNo, SteetName, City, State, Postcode)
+    VALUES('00', '34', 'Bridge St', 'BRI', 'QLD', '4101'),
+        ('04', '167', 'Vulture St', 'BRI', 'QLD', '4101'),
+        ('09', '14', 'Wilson St', 'BRI', 'QLD', '4101'),
+        ('23', '28', 'Elizebeth St', 'BRI', 'QLD', '4101'),
+        ('02', '67', 'Jane St', 'BRI', 'QLD', '4101'),
+        ('09', '21', 'Horan St', 'BRI', 'QLD', '4101'),
+        ('23', '45', 'Mary St', 'BRI', 'QLD', '4101');
 
-INSERT INTO TRIP()
-    VALUES(),
-    (),
-    (),
-    (),
-    ();
+INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) 
+    VALUES('97E29S93TMUS', 'ND9N4T8L', 'en', 1, 5, 'WBS3U920X0J966829', '2023-02-08 09:00:00', '2023-02-08 11:00:00', '2023-02-08 09:15:25', '2023-02-08 11:45:00', 24054, 24084),
+    ('V3R9FM7PX5RR', '9KY8GJFP', 'it', 2, 3, 'JHDFM8JR1XXX10152', '2023-02-10 05:00:00', '2023-02-10 08:00:00', '2023-02-10 05:12:00', '2023-02-10 08:05:20', 1257458, 1257568),
+    ('7NXIYPNVYOHD', 'T5YMTFPG', 'fr', 6, 7, 'KMHH351EMNU176947', '2023-02-08 09:00:00', '2023-02-08 11:00:00', '2023-02-08 09:46:13', '2023-02-08 11:05:30', 32615, 32648),
+    ('V3R9FM7PX5RR', 'F9336KVE', 'ar', 7, 1, 'WBA7T2C02LCD06343', '2023-02-12 09:00:00', '2023-02-12 10:30:00', '2023-02-12 09:23:01', '2023-02-12 17:47:05', 5984, 6034),
+    ('PPQ5I09LZNYU', 'ND9N4T8L', 'es', 3, 2, 'MR0HA3CD400355234', '2023-02-08 07:00:00', '2023-02-08 11:00:00', '2023-02-08 09:12:12', '2023-02-08 11:42:10', 84569, 84648);
+

@@ -79,29 +79,37 @@ INSERT INTO LANGUAGE(LanguageName, LanguageCode)
 
 
 INSERT INTO COUNTRY(CountryName, CountryCode)
-    VALUES("Australia", "AU"), 
+    VALUES("Australia", "AU"),
     ("Canada", "CA"),
-    ("Colombia", "CO"), 
+    ("Colombia", "CO"),
     ("Egypt", "EG"),
     ("Israel", "IL"),
     ("Italy", "IT"),
-    ("Serbia", "RS"), 
+    ("Serbia", "RS"),
     ("Spain", "ES"),
-    ("Tonga", "TO"), 
+    ("Tonga", "TO"),
     ("Zimbabwe", "ZW"); 
 
 
 
-INSERT INTO OFFICIAL_ROLE()
-    VALUES
-    
-
-INSERT INTO OFFICIAL()
+INSERT INTO OFFICIAL_ROLE(roleID, roleDescription)
     VALUES(),
     (),
     (),
     (),
     ();
+    
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName)
+    VALUES('ND9N4T8L', "AU", 'Jolie', 'Cullen'),
+('IT7YN37F', "CA", 'Valerie', 'Rose'),
+('9KY8GJFP', "CO", 'Andrés', 'Valdez'),
+('Z2J3OWJ7', "EG", 'Amani', 'Zaman'),
+('6P79BNKI', "IL", 'Samia', 'Muhammad'),
+('ZRFG65JG', "IT", 'Palmiro', 'Cattaneo'),
+('S8OATL1F', "RS", 'Srećko', 'Tomić'),
+('RQG16IZV', "ES", 'Amador', 'Trujillo'),
+('T5YMTFPG', "TO", 'Tevita', 'Chen'),
+('F9336KVE', "ZW", 'Kofi', 'Kamau'); 
 
 INSERT IGNORE INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken)
     VALUES("AU", 'en', 72),
@@ -116,7 +124,10 @@ INSERT IGNORE INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken)
     ("CO", 'en', 3.82), 
     ("EG", 'ar', 78),
     ("EG", 'en', 39.98),
-    ("IL", 'it', 97.41),
+    ("IL", 'en', 84.97),
+    ("IL", 'he', 53),
+    ("IL", 'ar', 20.9),
+    ("IT", 'it', 97.41),
     ("IT", 'en', 13.74),
     ("IT", 'fr', 8.46),
     ("IT", 'es', 6.56),

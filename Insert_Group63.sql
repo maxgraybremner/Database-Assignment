@@ -172,7 +172,7 @@ INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf)
     ('vi','OUW35JY1U8BW','5'),
     ('he','OUW35JY1U8BW','1');
 
-INSERT INTO OFFICIAL_LANGAUGE (OfficialID, LanguageCode, Off_Lang_Preference)
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference)
     VALUES('ND9N4T8L','en','2'),
     ('IT7YN37F','en','5'),
     ('9KY8GJFP','fr','2'),

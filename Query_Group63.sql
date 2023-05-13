@@ -48,4 +48,20 @@ ON trip.VIN = vehicle.VIN
 JOIN vehicle_type
 ON vehicle.veh_typeid = vehicle_type.Veh_TypeID;
 
-/*Q5 */
+/*Q5 List the Vehicles which have been driven more than 1000 KM in total. 
+Display the vehicle registration numbers and total kilometres travelled. 
+Show the list sorted by total kilometre travelled.*/
+
+SELECT vehicle.Veh_RegoNum as 'Registration Number',
+(trip.EndOdometerKM - trip.StartOdometerKM) AS "Total KM's travelled"
+FROM vehicle
+JOIN trip
+ON vehicle.VIN = trip.VIN
+WHERE (trip.EndOdometerKM - trip.StartOdometerKM) > 1000
+ORDER BY (trip.EndOdometerKM - trip.StartOdometerKM) DESC;
+
+/*Q6 Find the Passenger Vehicles whose one or more (single) repair costs were 
+more than the average repair cost of all vehicles. For each vehicle, display 
+the vehicle registration number, make, model, seat capacity, and total repair 
+cost. Note that if a vehicle went for multiple repairs, its total repair cost is 
+the sum of all these (single) repair costs. */

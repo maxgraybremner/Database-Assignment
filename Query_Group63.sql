@@ -12,7 +12,9 @@ last word is four character long ending with a ‘k’. For each such location,
 display its street number, street name, and city.*/
 
 SELECT StreetNo, StreetName, City
-FROM Location,
-WHERE City IS NOT NULL
-AND LENGTH(City) = 4
-AND RIGHT(CITY) = 'k';
+FROM Location
+WHERE City IS NOT NULL                              --checked for cities that do not consist of cities with less than one word
+AND RIGHT(City, 1) = 'k'                            --check that the last word ends in k
+AND LENGTH(SUBSTRING_INDEX(City, ' ', -1)) = 4;     --checks the length of the last word is equal to 4
+
+/*Q3 */

@@ -139,7 +139,7 @@ CREATE TABLE IF NOT EXISTS LOCATION(
     LocationID  INT AUTO_INCREMENT,
     LocationTypeID CHAR(2),
     StreetNo VARCHAR(5),
-    SteetName VARCHAR(50),
+    StreetName VARCHAR(50),
     City VARCHAR(40),
     State CHAR(3),
     Postcode CHAR(4),

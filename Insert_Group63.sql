@@ -199,20 +199,30 @@ INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference)
     ('F9336KVE','en','4');
 
 INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription)
-    VALUES('02', 'Booking Office'),
-       ('00', 'Head Office'),
-       ('04', 'Car Park'),
-       ('09', 'Warehouse'),
-       ('23', 'Guzman y Gomez');
+    VALUES('00', 'Booking Office'),
+       ('01', 'Head Office'),
+       ('02', 'Car Park'),
+       ('03', 'Warehouse'),
+       ('04', 'Guzman y Gomez'),
+       ('05', 'Swimming Pool'),
+       ('06', 'Running Track'),
+       ('07', 'Velodrome'),
+       ('08', 'Soccer Field'),
+       ('09', 'Basketball Court'),
+       ('10', 'Marathon Start')
+       ('11', 'Marathon End'),
+       ('12', 'Beach')
+       ('13', 'Accomodation'),
+       ('14', 'Airport');
 
-INSERT INTO LOCATION (LocationTypeID, StreetNo, SteetName, City, State, Postcode)
-    VALUES('00', '34', 'Bridge St', 'BRI', 'QLD', '4101'),
-        ('04', '167', 'Vulture St', 'BRI', 'QLD', '4101'),
-        ('09', '14', 'Wilson St', 'BRI', 'QLD', '4101'),
-        ('23', '28', 'Elizebeth St', 'BRI', 'QLD', '4101'),
-        ('02', '67', 'Jane St', 'BRI', 'QLD', '4101'),
-        ('09', '21', 'Horan St', 'BRI', 'QLD', '4101'),
-        ('23', '45', 'Mary St', 'BRI', 'QLD', '4101');
+INSERT INTO LOCATION (LocationTypeID, StreetNo, StreetName, City, State, Postcode)
+    VALUES('13', '30', 'Parkes Road', 'Seaholme', 'VIC', '3018'),
+        ('05', '27', 'Gilbert Street', 'Lapoinya', 'TAS', '7325'),
+        ('14', '69', 'Commercial Street', 'Newham', 'VIC', '3442'),
+        ('08', '28', 'Boland Park', 'Dingo Beach', 'QLD', '4800'),
+        ('04', '67', 'Stanley Drive', 'Tuckombil', 'NSW', '2477'),
+        ('07', '21', 'Magnolia Drive', 'Caravan Head', 'NSW', '2225'),
+        ('09', '4202', 'Asbury Park', 'Maitland', 'NSW', '2320')
 
 INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) 
     VALUES('97E29S93TMUS', 'ND9N4T8L', 'en', 1, 5, 'WBS3U920X0J966829', '2023-02-08 09:00:00', '2023-02-08 11:00:00', '2023-02-08 09:15:25', '2023-02-08 11:45:00', 24054, 24084),

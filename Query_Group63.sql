@@ -65,3 +65,14 @@ more than the average repair cost of all vehicles. For each vehicle, display
 the vehicle registration number, make, model, seat capacity, and total repair 
 cost. Note that if a vehicle went for multiple repairs, its total repair cost is 
 the sum of all these (single) repair costs. */
+
+/*Q7 A list of all Drivers who have not been involved in any trip yet. Display the 
+drivers’ full names, security clearance levels, and the languages they speak 
+with at their highest proficiency levels. Note that a driver may speak in 
+more than one language at his/her highest level of proficiency. 
+*/
+
+/*Q8 For each vehicle type (e.g., Sedan), list the number of future bookings of 
+vehicles if number of future bookings in each type is more than 2. For each 
+vehicle type, display the number of bookings. Sort the output in descending 
+order of the number of bookings.*/

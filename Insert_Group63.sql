@@ -177,7 +177,7 @@ INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference)
     ('ND9N4T8L','to','2'),
     ('ND9N4T8L','ar','2'),
     ('IT7YN37F','en','5'),
-    ('IT7YN37F','fr','5'),
+    ('IT7YN37F','fr','4'),
     ('IT7YN37F','zh','1'),
     ('9KY8GJFP','es','5'),
     ('9KY8GJFP','en','4'),
@@ -194,7 +194,7 @@ INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference)
     ('RQG16IZV','it','3'),
     ('RQG16IZV','fr','3'),
     ('T5YMTFPG','to','5'),
-    ('T5YMTFPG','en','5'),
+    ('T5YMTFPG','en','4'),
     ('F9336KVE','sn','5'),
     ('F9336KVE','en','4');
 

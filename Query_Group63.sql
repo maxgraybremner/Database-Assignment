@@ -35,4 +35,17 @@ WHERE Official_Language.Off_Lang_Preference = (
 )
 ORDER BY Official.OfficialFirstName;
 
-/*Q4 */
+/*Q4 The date on which the most recent Trip(s) was(were) completed. Show the 
+date as well as the vehicle model(s) and type(s) (description) involved in the 
+trip(s). */
+
+SELECT DATE(MAX(trip.EndTimeActual)) AS 'Most Recent date',
+vehicle.veh_model,
+vehicle_type.Veh_Type_Description
+FROM trip
+JOIN vehicle 
+ON trip.VIN = vehicle.VIN
+JOIN vehicle_type
+ON vehicle.veh_typeid = vehicle_type.Veh_TypeID;
+
+/*Q5 */

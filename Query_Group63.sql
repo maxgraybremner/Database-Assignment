@@ -12,7 +12,7 @@ last word is four character long ending with a ‘k’. For each such location,
 display its street number, street name, and city.*/
 SELECT StreetNo, StreetName, City
 FROM Location
-WHERE City IS NOT NULL                              --checked for cities that do not consist of cities with less than one word
+WHERE City IS NOT NULL                                --checked for cities that do not consist of cities with less than one word
 AND RIGHT(City, 1) = 'k'                            --check that the last word ends in k
 AND LENGTH(SUBSTRING_INDEX(City, ' ', -1)) = 4;     --checks the length of the last word is equal to 4
 
@@ -21,18 +21,18 @@ AND LENGTH(SUBSTRING_INDEX(City, ' ', -1)) = 4;     --checks the length of the l
 their First name followed by Last name. Display their full names and the 
 highest preferred languages (names and preferences). Note that there is only 
 one highest preferred language for each official. */
-SELECT  CONCAT(Official.OfficialFirstName, ' ', Official.OfficialLastName) AS 'Official Full Name', 
-Language.LanguageName AS 'Preferred Language'
-FROM Official_Language
-JOIN Official
-ON Official_Language.OfficialID = Official.OfficialID
-JOIN Language
-ON Official_Language.languageCode = Language.languageCode
-WHERE Official_Language.Off_Lang_Preference = (
-    SELECT MAX(Official_Language.Off_Lang_Preference)
-    FROM Official_Language
+SELECT  CONCAT(o.OfficialFirstName, ' ', o.OfficialLastName) AS 'Official Full Name', 
+l.LanguageName AS 'Preferred Language'
+FROM Official_Language AS ol
+JOIN Official AS o
+ON ol.OfficialID = o.OfficialID
+JOIN Language AS l
+ON ol.languageCode = Language.languageCode
+WHERE ol.Off_Lang_Preference = (
+    SELECT MAX(ol.Off_Lang_Preference)
+    FROM Official_Language as ol
 )
-ORDER BY Official.OfficialFirstName;
+ORDER BY o.OfficialFirstName;
 
 
 /*Q4 The date on which the most recent Trip(s) was(were) completed. Show the 
@@ -66,11 +66,26 @@ the vehicle registration number, make, model, seat capacity, and total repair
 cost. Note that if a vehicle went for multiple repairs, its total repair cost is 
 the sum of all these (single) repair costs. */
 
+
+
 /*Q7 A list of all Drivers who have not been involved in any trip yet. Display the 
 drivers’ full names, security clearance levels, and the languages they speak 
 with at their highest proficiency levels. Note that a driver may speak in 
 more than one language at his/her highest level of proficiency. 
 */
+SELECT CONCAT(d.DriverFirstName, ' ', d.DriverLastName) AS 'Driver Full Name',
+d.ClearanceLevel,
+dl.LanguageCode,
+dl.DriverLanguageProf
+FROM driver AS d
+JOIN driver_language as dl
+ON d.DriverLicenseNum = dl.DriverLicenseNum
+WHERE NOT EXISTS (
+    SELECT t.DriverLicenseNum
+    FROM trip AS t
+    WHERE t.DriverLicenseNum = d.DriverLicenseNum
+);
+
 
 /*Q8 For each vehicle type (e.g., Sedan), list the number of future bookings of 
 vehicles if number of future bookings in each type is more than 2. For each 

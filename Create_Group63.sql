@@ -118,7 +118,7 @@ CREATE TABLE IF NOT EXISTS DRIVER_LANGUAGE(
         REFERENCES DRIVER(DriverLicenseNum)
 ) ENGINE=Innodb;
 
-CREATE TABLE IF NOT EXISTS OFFICIAL_LANGAUGE(
+CREATE TABLE IF NOT EXISTS OFFICIAL_LANGUAGE(
     OfficialID CHAR(8),
     LanguageCode CHAR(2),
     Off_Lang_Preference CHAR(1),
@@ -139,7 +139,7 @@ CREATE TABLE IF NOT EXISTS LOCATION(
     LocationID  INT AUTO_INCREMENT,
     LocationTypeID CHAR(2),
     StreetNo VARCHAR(5),
-    SteetName VARCHAR(50),
+    StreetName VARCHAR(50),
     City VARCHAR(40),
     State CHAR(3),
     Postcode CHAR(4),
@@ -166,9 +166,9 @@ CREATE TABLE IF NOT EXISTS TRIP(
     FOREIGN KEY (DriverLicenseNum)
         REFERENCES DRIVER(DriverLicenseNum),
     FOREIGN KEY (OfficialID)
-        REFERENCES OFFICIAL_LANGAUGE(OfficialID),
+        REFERENCES OFFICIAL_LANGUAGE(OfficialID),
     FOREIGN KEY (LanguageCode)
-        REFERENCES LANGUAGE(LanguageCode),
+        REFERENCES OFFICIAL_LANGUAGE(LanguageCode),
     FOREIGN KEY (PickUpLocID)
         REFERENCES LOCATION(LocationID),
     FOREIGN KEY (DropOffLocID)

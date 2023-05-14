@@ -53,9 +53,10 @@ INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity)
 INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail)
     VALUES('WBS3U920X0J966829', 23984, 'm', '2023-06-02', 1163.75, '20,000km inspection'),
     ('WDF9066352E036011', 18126, 'r', '2023-05-18', 240,'Air-Conditioning is not cold and engine fan full speed'),
-    ('JHDFM8JR1XXX10152', 125684, 'm', '2023-05-29', 831, '125,000km service and investogate shudder when changin gears'),
-    ('MR0HA3CD400355234', 84569, 'r', '2023-05-11', 320, 'Investigate intermittently blowing white smoke while driving on the highway'),
-    ('KMHH351EMNU176947', 32565, 'm', '2023-05-12', 596.99, '30,000km service and an issue during cold start.');
+    ('JHDFM8JR1XXX10152', 125684, 'm', '2023-05-29', 831, '125,000km service'),
+    ('JHDFM8JR1XXX10152', 125700, 'r', '2023-06-01', 831, 'investogate shudder when changing gears'),
+    ('MR0HA3CD400355234', 84569, 'r', '2023-05-11', 140, 'Investigate intermittently blowing white smoke while driving on the highway'),
+    ('KMHH351EMNU176947', 32565, 'm', '2023-05-12', 812.2, '30,000km service and an issue during cold start.');
 
 INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable)
     VALUES('PPQ5I09LZNYU', 'Agnes', 'Wauters', 2, 'n'),
@@ -172,33 +173,57 @@ INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf)
     ('vi','OUW35JY1U8BW','5'),
     ('he','OUW35JY1U8BW','1');
 
-INSERT INTO OFFICIAL_LANGAUGE (OfficialID, LanguageCode, Off_Lang_Preference)
-    VALUES('ND9N4T8L','en','2'),
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference)
+    VALUES('ND9N4T8L','en','5'),
+    ('ND9N4T8L','to','2'),
+    ('ND9N4T8L','ar','2'),
     ('IT7YN37F','en','5'),
-    ('9KY8GJFP','fr','2'),
+    ('IT7YN37F','fr','4'),
+    ('IT7YN37F','zh','1'),
+    ('9KY8GJFP','es','5'),
+    ('9KY8GJFP','en','4'),
+    ('Z2J3OWJ7','ar','5'),
     ('Z2J3OWJ7','en','3'),
-    ('6P79BNKI','fr','4'),
-    ('ZRFG65JG','en','2'),
-    ('S8OATL1F','en','1'),
-    ('RQG16IZV','fr','4'),
-    ('T5YMTFPG','en','2'),
-    ('F9336KVE','fr','1');
+    ('6P79BNKI','ar','5'),
+    ('6P79BNKI','en','4'),
+    ('ZRFG65JG','it','5'),
+    ('ZRFG65JG','es','3'),
+    ('ZRFG65JG','en','3'),
+    ('S8OATL1F','sr','5'),
+    ('S8OATL1F','en','4'),
+    ('RQG16IZV','es','5'),
+    ('RQG16IZV','it','3'),
+    ('RQG16IZV','fr','3'),
+    ('T5YMTFPG','to','5'),
+    ('T5YMTFPG','en','4'),
+    ('F9336KVE','sn','5'),
+    ('F9336KVE','en','4');
 
 INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription)
-    VALUES('02', 'Booking Office'),
-       ('00', 'Head Office'),
-       ('04', 'Car Park'),
-       ('09', 'Warehouse'),
-       ('23', 'Guzman y Gomez');
+    VALUES('00', 'Booking Office'),
+    ('01', 'Head Office'),
+    ('02', 'Car Park'),
+    ('03', 'Warehouse'),
+    ('04', 'Guzman y Gomez'),
+    ('05', 'Swimming Pool'),
+    ('06', 'Running Track'),
+    ('07', 'Velodrome'),
+    ('08', 'Soccer Field'),
+    ('09', 'Basketball Court'),
+    ('10', 'Marathon Start'),
+    ('11', 'Marathon End'),
+    ('12', 'Beach'),
+    ('13', 'Accomodation'),
+    ('14', 'Airport');
 
-INSERT INTO LOCATION (LocationTypeID, StreetNo, SteetName, City, State, Postcode)
-    VALUES('00', '34', 'Bridge St', 'BRI', 'QLD', '4101'),
-        ('04', '167', 'Vulture St', 'BRI', 'QLD', '4101'),
-        ('09', '14', 'Wilson St', 'BRI', 'QLD', '4101'),
-        ('23', '28', 'Elizebeth St', 'BRI', 'QLD', '4101'),
-        ('02', '67', 'Jane St', 'BRI', 'QLD', '4101'),
-        ('09', '21', 'Horan St', 'BRI', 'QLD', '4101'),
-        ('23', '45', 'Mary St', 'BRI', 'QLD', '4101');
+INSERT INTO LOCATION (LocationTypeID, StreetNo, StreetName, City, State, Postcode)
+    VALUES('13', '30', 'Parkes Road', 'Seaholme', 'VIC', '3018'),
+    ('05', '27', 'Gilbert Street', 'Lapoinya', 'TAS', '7325'),
+    ('14', '69', 'Commercial Street', 'Newham Park', 'VIC', '3442'),
+    ('08', '28', 'Boland Park', 'Dingo Beach', 'QLD', '4800'),
+    ('04', '67', 'Stanley Drive', 'Tuckombil Tilk', 'NSW', '2477'),
+    ('07', '21', 'Magnolia Drive', 'Caravan Head', 'NSW', '2225'),
+    ('09', '4202', 'Asbury Court', 'Maitland', 'NSW', '2320');
 
 INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) 
     VALUES('97E29S93TMUS', 'ND9N4T8L', 'en', 1, 5, 'WBS3U920X0J966829', '2023-02-08 09:00:00', '2023-02-08 11:00:00', '2023-02-08 09:15:25', '2023-02-08 11:45:00', 24054, 24084),
@@ -206,3 +231,4 @@ INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropO
     ('7NXIYPNVYOHD', 'T5YMTFPG', 'fr', 6, 7, 'KMHH351EMNU176947', '2023-02-08 09:00:00', '2023-02-08 11:00:00', '2023-02-08 09:46:13', '2023-02-08 11:05:30', 32615, 32648),
     ('V3R9FM7PX5RR', 'F9336KVE', 'ar', 7, 1, 'WBA7T2C02LCD06343', '2023-02-12 09:00:00', '2023-02-12 10:30:00', '2023-02-12 09:23:01', '2023-02-12 17:47:05', 5984, 6034),
     ('PPQ5I09LZNYU', 'ND9N4T8L', 'es', 3, 2, 'MR0HA3CD400355234', '2023-02-08 07:00:00', '2023-02-08 11:00:00', '2023-02-08 09:12:12', '2023-02-08 11:42:10', 84569, 84648);
+

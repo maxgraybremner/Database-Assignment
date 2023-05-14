@@ -56,7 +56,7 @@ INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, 
     ('JHDFM8JR1XXX10152', 125684, 'm', '2023-05-29', 831, '125,000km service'),
     ('JHDFM8JR1XXX10152', 125700, 'r', '2023-06-01', 831, 'investogate shudder when changing gears'),
     ('MR0HA3CD400355234', 84569, 'r', '2023-05-11', 140, 'Investigate intermittently blowing white smoke while driving on the highway'),
-    ('KMHH351EMNU176947', 32565, 'm', '2023-05-12', 596.99, '30,000km service and an issue during cold start.');
+    ('KMHH351EMNU176947', 32565, 'm', '2023-05-12', 812.2, '30,000km service and an issue during cold start.');
 
 INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable)
     VALUES('PPQ5I09LZNYU', 'Agnes', 'Wauters', 2, 'n'),
@@ -201,34 +201,39 @@ INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference)
 
 INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription)
     VALUES('00', 'Booking Office'),
-       ('01', 'Head Office'),
-       ('02', 'Car Park'),
-       ('03', 'Warehouse'),
-       ('04', 'Guzman y Gomez'),
-       ('05', 'Swimming Pool'),
-       ('06', 'Running Track'),
-       ('07', 'Velodrome'),
-       ('08', 'Soccer Field'),
-       ('09', 'Basketball Court'),
-       ('10', 'Marathon Start'),
-       ('11', 'Marathon End'),
-       ('12', 'Beach'),
-       ('13', 'Accomodation'),
-       ('14', 'Airport');
+    ('01', 'Head Office'),
+    ('02', 'Car Park'),
+    ('03', 'Warehouse'),
+    ('04', 'Guzman y Gomez'),
+    ('05', 'Swimming Pool'),
+    ('06', 'Running Track'),
+    ('07', 'Velodrome'),
+    ('08', 'Soccer Field'),
+    ('09', 'Basketball Court'),
+    ('10', 'Marathon Start'),
+    ('11', 'Marathon End'),
+    ('12', 'Beach'),
+    ('13', 'Accomodation'),
+    ('14', 'Airport');
 
 INSERT INTO LOCATION (LocationTypeID, StreetNo, StreetName, City, State, Postcode)
     VALUES('13', '30', 'Parkes Road', 'Seaholme', 'VIC', '3018'),
-        ('05', '27', 'Gilbert Street', 'Lapoinya', 'TAS', '7325'),
-        ('14', '69', 'Commercial Street', 'Newham Park', 'VIC', '3442'),
-        ('08', '28', 'Boland Park', 'Dingo Beach', 'QLD', '4800'),
-        ('04', '67', 'Stanley Drive', 'Tuckombil Tilk', 'NSW', '2477'),
-        ('07', '21', 'Magnolia Drive', 'Caravan Head', 'NSW', '2225'),
-        ('09', '4202', 'Asbury Court', 'Maitland', 'NSW', '2320');
+    ('05', '27', 'Gilbert Street', 'Lapoinya', 'TAS', '7325'),
+    ('14', '69', 'Commercial Street', 'Newham Park', 'VIC', '3442'),
+    ('08', '28', 'Boland Park', 'Dingo Beach', 'QLD', '4800'),
+    ('04', '67', 'Stanley Drive', 'Tuckombil Tilk', 'NSW', '2477'),
+    ('07', '21', 'Magnolia Drive', 'Caravan Head', 'NSW', '2225'),
+    ('09', '4202', 'Asbury Court', 'Maitland', 'NSW', '2320');
 
 INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) 
-    VALUES('97E29S93TMUS', 'ND9N4T8L', 'en', 1, 5, 'WBS3U920X0J966829', '2023-02-08 09:00:00', '2023-02-08 11:00:00', '2023-02-08 09:15:25', '2023-02-08 11:45:00', 24054, 24084),
+    VALUES('97E29S93TMUS', 'ND9N4T8L', 'en', 1, 5, 'WBS3U920X0J966829', '2023-02-08 10:30:00', '2023-02-08 11:00:00', '2023-02-08 09:15:25', '2023-02-08 11:45:00', 24054, 24084),
     ('V3R9FM7PX5RR', '9KY8GJFP', 'es', 2, 3, 'JHDFM8JR1XXX10152', '2023-02-10 05:00:00', '2023-02-10 08:00:00', '2023-02-10 05:12:00', '2023-02-10 08:05:20', 125684, 127517),
-    ('7NXIYPNVYOHD', 'T5YMTFPG', 'to', 6, 7, 'KMHH351EMNU176947', '2023-02-08 09:00:00', '2023-02-08 11:00:00', '2023-02-08 09:46:13', '2023-02-08 11:05:30', 32615, 32995),
-    ('V3R9FM7PX5RR', 'F9336KVE', 'sn', 7, 1, 'WBA7T2C02LCD06343', '2023-02-12 09:00:00', '2023-02-12 10:30:00', '2023-02-12 09:23:01', '2023-02-12 17:47:05', 5984, 7034),
-    ('PPQ5I09LZNYU', 'ZRFG65JG', 'it', 3, 2, 'MR0HA3CD400355234', '2023-02-08 07:00:00', '2023-02-08 11:00:00', '2023-02-08 09:12:12', '2023-02-08 11:42:10', 84569, 84648);
+    ('7NXIYPNVYOHD', 'T5YMTFPG', 'to', 6, 7, 'KMHH351EMNU176947', '2023-02-12 09:30:00', '2023-02-12 11:00:00', '2023-02-12 09:46:13', '2023-02-12 11:05:30', 32615, 32995),
+    ('V3R9FM7PX5RR', 'F9336KVE', 'sn', 7, 1, 'WBA7T2C02LCD06343', '2023-02-12 21:00:00', '2023-02-12 22:30:00', '2023-02-12 21:23:01', '2023-02-12 22:47:05', 5984, 7034),
+    ('PPQ5I09LZNYU', 'ZRFG65JG', 'it', 3, 2, 'MR0HA3CD400355234', '2023-02-08 07:45:00', '2023-02-08 11:00:00', '2023-02-08 07:12:12', '2023-02-08 11:42:10', 84569, 84648),
+    ('UZ4B2RHA6U62', 'T5YMTFPG', 'to', 4, 6, 'MR0HA3CD400355234', '2023-07-10 12:15:00', '2023-07-10 14:30:00', NULL, NULL, NULL, NULL),
+    ('97E29S93TMUS', 'RQG16IZV', 'es', 5, 2, 'WBA7T2C02LCD06343', '2023-07-12 15:30:00', '2023-07-12 16:15:00', NULL, NULL, NULL, NULL),
+    ('UZ4B2RHA6U62', '9KY8GJFP', 'es', 1, 6, 'MR0HA3CD400355234', '2023-07-13 5:15:00', '2023-07-13 6:30:00', NULL, NULL, NULL, NULL),
+    ('97E29S93TMUS', 'RQG16IZV', 'es', 5, 2, 'WBA7T2C02LCD06343', '2023-07-16 15:30:00', '2023-07-16 16:15:00', NULL, NULL, NULL, NULL),
+    ('UZ4B2RHA6U62', '9KY8GJFP', 'es', 1, 6, 'MR0HA3CD400355234', '2023-07-20 5:15:00', '2023-07-20 6:30:00', NULL, NULL, NULL, NULL);
 

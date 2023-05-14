@@ -32,13 +32,21 @@ INSERT INTO OFFICIAL (
     OfficialRole,
     CountryCode,
     OfficialFirstName,
-    OfficialLastName,
+    OfficialLastName
 ) VALUES (
     'SPN99745',
     'Judge',
     'ES',
     'Daniel',
-    'Ortega',
-)
+    'Ortega'
+);
+/* COUNTRY TABLE */
+INSERT INTO COUNTRY (
+    CountryCode,
+    CountryName
+) VALUES (
+    'ES',
+    'Spain'
+);
 /* TRIP TABLE */
 INSERT INTO TRIP () VALUES ()

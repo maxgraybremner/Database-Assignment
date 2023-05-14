@@ -26,3 +26,19 @@
     Actual Start: 10:15AM
     Actual End: 11:55AM
 */
+/* OFFICIAL TABLE */
+INSERT INTO OFFICIAL (
+    OfficialID,
+    OfficialRole,
+    CountryCode,
+    OfficialFirstName,
+    OfficialLastName,
+) VALUES (
+    'SPN99745',
+    'Judge',
+    'ES',
+    'Daniel',
+    'Ortega',
+)
+/* TRIP TABLE */
+INSERT INTO TRIP () VALUES ()

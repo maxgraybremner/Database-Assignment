@@ -46,11 +46,7 @@ trip(s). */
 SELECT DATE(t.EndTimeActual) AS 'Most Recent date',
 v.veh_model AS "Vehicle Model",
 vt.Veh_Type_Description AS "Vehicle Type"
-FROM trip AS t
-JOIN vehicle AS v
-ON t.VIN = v.VIN
-JOIN vehicle_type AS vt
-ON v.veh_typeid = vt.Veh_TypeID
+FROM trip AS t, vehicle AS v, vehicle_type AS vt
 WHERE DATE(t.EndTimeActual) = (
     SELECT MAX(DATE(EndTimeActual))
     FROM trip
@@ -62,9 +58,7 @@ Display the vehicle registration numbers and total kilometres travelled.
 Show the list sorted by total kilometre travelled.*/
 SELECT v.Veh_RegoNum as 'Registration Number',
 (t.EndOdometerKM - t.StartOdometerKM) AS "Total KM's travelled"
-FROM vehicle AS v
-JOIN trip AS t
-ON v.VIN = t.VIN
+FROM vehicle AS v, trip AS t
 WHERE (t.EndOdometerKM - t.StartOdometerKM) > 1000
 ORDER BY (t.EndOdometerKM - t.StartOdometerKM) DESC;
 
@@ -79,11 +73,7 @@ v.Veh_Make AS "Vehicle Make",
 v.Veh_Model AS "Vehicle Model", 
 pv.Pass_seat_capacity AS "Seat capacity",
 sum(mr.mr_cost) AS "Total Cost"
-FROM vehicle AS v
-LEFT JOIN passenger_vehicle AS pv
-ON v.VIN = pv.VIN
-JOIN MAINTENANCE_REPAIR AS mr
-ON v.VIN = mr.VIN
+FROM vehicle AS v, passenger_vehicle AS pv, MAINTENANCE_REPAIR AS mr
 GROUP BY v.VIN
 HAVING sum(mr.mr_cost) > (
     SELECT AVG(mr_cost)
@@ -99,11 +89,7 @@ more than one language at his/her highest level of proficiency.
 SELECT CONCAT(d.DriverFirstName, ' ', d.DriverLastName) AS 'Driver Full Name',
 d.ClearanceLevel AS 'Security Clearance Level',
 l.LanguageName AS "Driver's most proficient language"
-FROM driver AS d
-JOIN driver_language as dl
-ON d.DriverLicenseNum = dl.DriverLicenseNum
-JOIN language AS l
-On dl.languageCode = l.languageCode
+FROM driver AS d, driver_language as dl, language AS l
 WHERE NOT EXISTS (
     SELECT t.DriverLicenseNum
     FROM trip AS t
@@ -122,11 +108,7 @@ vehicle type, display the number of bookings. Sort the output in descending
 order of the number of bookings.*/
 SELECT vt.Veh_Type_Description AS "Vehicle Type",
 COUNT(v.veh_typeid) AS "Number of future booking if more than 2"
-FROM Trip AS t
-JOIN vehicle AS v
-ON t.VIN = v.VIN
-JOIN vehicle_type AS vt
-ON v.Veh_TypeID = vt.Veh_TypeID
+FROM Trip AS t, JOIN vehicle AS v, vehicle_type AS vt
 WHERE t.StartTimeIntended > CURDATE()
 GROUP BY v.veh_typeid
 HAVING COUNT(v.veh_typeid) >= 2

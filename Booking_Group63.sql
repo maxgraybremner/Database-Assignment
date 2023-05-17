@@ -111,5 +111,6 @@ SET
     EndOdometerKM = 127119
 
 WHERE 
-    OfficialID = 'SPN99745';
+    OfficialID = 'SPN99745' AND 
+    StartTimeIntended = '2023-04-09 10:00:00';
 

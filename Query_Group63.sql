@@ -7,6 +7,7 @@ DriverFirstName AS "First Name",
 DriverLastName AS "Last Name", 
 ClearanceLevel AS "Security Clearance Level"
 FROM DRIVER
+WHERE IsAvailable = 'y'
 ORDER BY ClearanceLevel DESC;
 
 

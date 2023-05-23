@@ -112,5 +112,5 @@ SET
 
 WHERE 
     OfficialID = 'SPN99745' AND 
-    StartTimeIntended = '2023-04-09 10:00:00';
+    StartTimeIntended = '2023-04-09 10:00:00'; /* The Booking number would be used if it was known and static, but because it is autoincremented and the databeses this gets tested against are unknown, it is unfeasible to assume what it would be. */
 

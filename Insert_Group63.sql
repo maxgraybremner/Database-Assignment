@@ -2,73 +2,67 @@
 
 USE CTSDB;
 
-INSERT INTO VEHICLE_TYPE(Veh_TypeID, Veh_Type_Description)
-    VALUES('se', 'sedan'),
-    ('ha', 'hatchback'),
-    ('bt', 'boxtruck'),
-    ('uv', 'utility vehicle'),
-    ('va', 'van'),
-    ('pm', 'people mover');
+INSERT INTO VEHICLE_TYPE(Veh_TypeID, Veh_Type_Description) VALUES('se', 'sedan');
+INSERT INTO VEHICLE_TYPE(Veh_TypeID, Veh_Type_Description) VALUES('ha', 'hatchback');
+INSERT INTO VEHICLE_TYPE(Veh_TypeID, Veh_Type_Description) VALUES('bt', 'boxtruck');
+INSERT INTO VEHICLE_TYPE(Veh_TypeID, Veh_Type_Description) VALUES('uv', 'utility vehicle');
+INSERT INTO VEHICLE_TYPE(Veh_TypeID, Veh_Type_Description) VALUES('va', 'van');
+INSERT INTO VEHICLE_TYPE(Veh_TypeID, Veh_Type_Description) VALUES('pm', 'people mover');
 
-INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo)
-    VALUES('WBA7T2C02LCD06343', 'se', 'BMW', '7 Series', '2020', 'silver', '921GQ3', 5984, 'y', 'y', 'n'),
-    ('WBS3U920X0J966829', 'se', 'BMW', '3 Series', '2019', 'black', '241KST', 23984, 'y', 'y', 'n'),
-    ('WAUZZZ8V5G1048824', 'se', 'Audi', 'A5', '2018', 'black', '841GD5', 85846, 'n', 'y', 'n'),
-    ('W1W8ED6Y7LP320845', 'va', 'Mercedes-Benz', 'Sprinter', '2019', 'white', '699KJB',47154, 'y', 'n', 'y'),
-    ('WDF9066352E036011', 'pm', 'Mercedes-Benz', 'Sprinter', '2019', 'white', '656GB5', 18126, 'y', 'y', 'n'),
-    ('WDF9066352E086788', 'pm', 'Mercedes-Benz', 'Sprinter', '2019', 'black', '886CH8', 23156, 'n', 'y', 'n'),
-    ('JHDFM8JR1XXX10152', 'bt', 'Hino', '300 Series', '2016', 'white', 'XQZ4CH', 125684, 'y', 'n', 'y'),
-    ('JHDFC2AG1XXX10349', 'bt', 'Hino', '300 Series', '2016', 'white', '235EDO', 184693, 'n', 'n', 'y'),
-    ('JHDFC2AG1XXX10594', 'bt', 'Hino', '300 Series', '2017', 'white', '331TFT', 155811, 'y', 'n', 'y'),
-    ('MR0HA3CD400387900', 'uv', 'Toyota', 'Hilux', '2017', 'white', '233XOR', 90545, 'y', 'y', 'y'),
-    ('MR0HA3CD400355234', 'uv', 'Toyota', 'Hilux', '2017', 'white', '234XOR', 84569, 'n', 'y', 'y'),
-    ('MR0HA3CD400323564', 'uv', 'Toyota', 'Hilux', '2017', 'white', '235XOR', 112556, 'n', 'y', 'y'),
-    ('KMHH351EMNU176947', 'ha', 'Hyundai', 'i30', '2022', 'white', '166GU8', 32565, 'n', 'y', 'n'),
-    ('KMHH351EMNU156489', 'ha', 'Hyundai', 'i30', '2022', 'black', '348FR3', 74859, 'n', 'y', 'n'),
-    ('KMHH351EMNU122345', 'ha', 'Hyundai', 'i30', '2022', 'black', '595FI3', 12457, 'y', 'y', 'n');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo) VALUES('WBA7T2C02LCD06343', 'se', 'BMW', '7 Series', '2020', 'silver', '921GQ3', 5984, 'y', 'y', 'n');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo) VALUES('WBS3U920X0J966829', 'se', 'BMW', '3 Series', '2019', 'black', '241KST', 23984, 'y', 'y', 'n');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo) VALUES('WAUZZZ8V5G1048824', 'se', 'Audi', 'A5', '2018', 'black', '841GD5', 85846, 'n', 'y', 'n');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo) VALUES('W1W8ED6Y7LP320845', 'va', 'Mercedes-Benz', 'Sprinter', '2019', 'white', '699KJB',47154, 'y', 'n', 'y');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo) VALUES('WDF9066352E036011', 'pm', 'Mercedes-Benz', 'Sprinter', '2019', 'white', '656GB5', 18126, 'y', 'y', 'n');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo) VALUES('WDF9066352E086788', 'pm', 'Mercedes-Benz', 'Sprinter', '2019', 'black', '886CH8', 23156, 'n', 'y', 'n');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo) VALUES('JHDFM8JR1XXX10152', 'bt', 'Hino', '300 Series', '2016', 'white', 'XQZ4CH', 125684, 'y', 'n', 'y');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo) VALUES('JHDFC2AG1XXX10349', 'bt', 'Hino', '300 Series', '2016', 'white', '235EDO', 184693, 'n', 'n', 'y');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo) VALUES('JHDFC2AG1XXX10594', 'bt', 'Hino', '300 Series', '2017', 'white', '331TFT', 155811, 'y', 'n', 'y');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo) VALUES('MR0HA3CD400387900', 'uv', 'Toyota', 'Hilux', '2017', 'white', '233XOR', 90545, 'y', 'y', 'y');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo) VALUES('MR0HA3CD400355234', 'uv', 'Toyota', 'Hilux', '2017', 'white', '234XOR', 84569, 'n', 'y', 'y');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo) VALUES('MR0HA3CD400323564', 'uv', 'Toyota', 'Hilux', '2017', 'white', '235XOR', 112556, 'n', 'y', 'y');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo) VALUES('KMHH351EMNU176947', 'ha', 'Hyundai', 'i30', '2022', 'white', '166GU8', 32565, 'n', 'y', 'n');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo) VALUES('KMHH351EMNU156489', 'ha', 'Hyundai', 'i30', '2022', 'black', '348FR3', 74859, 'n', 'y', 'n');
+INSERT INTO VEHICLE(VIN, Veh_TypeID, Veh_Make, Veh_Model, Veh_Year, Veh_Colour, Veh_RegoNum, Veh_Odometer, Veh_Availability, Veh_For_Passenger, Veh_For_Cargo) VALUES('KMHH351EMNU122345', 'ha', 'Hyundai', 'i30', '2022', 'black', '595FI3', 12457, 'y', 'y', 'n');
 
-INSERT INTO PASSENGER_VEHICLE(VIN, Pass_seat_capacity)
-    VALUES('WBA7T2C02LCD06343', 4),
-    ('WBS3U920X0J966829', 4),
-    ('WAUZZZ8V5G1048824', 4),
-    ('WDF9066352E036011', 12),
-    ('WDF9066352E086788', 12),
-    ('MR0HA3CD400387900', 4),
-    ('MR0HA3CD400355234', 4),
-    ('MR0HA3CD400323564', 4),
-    ('KMHH351EMNU176947', 5),
-    ('KMHH351EMNU156489', 5),
-    ('KMHH351EMNU122345', 5);
+INSERT INTO PASSENGER_VEHICLE(VIN, Pass_seat_capacity) VALUES('WBA7T2C02LCD06343', 4);
+INSERT INTO PASSENGER_VEHICLE(VIN, Pass_seat_capacity) VALUES('WBS3U920X0J966829', 4);
+INSERT INTO PASSENGER_VEHICLE(VIN, Pass_seat_capacity) VALUES('WAUZZZ8V5G1048824', 4);
+INSERT INTO PASSENGER_VEHICLE(VIN, Pass_seat_capacity) VALUES('WDF9066352E036011', 12);
+INSERT INTO PASSENGER_VEHICLE(VIN, Pass_seat_capacity) VALUES('WDF9066352E086788', 12);
+INSERT INTO PASSENGER_VEHICLE(VIN, Pass_seat_capacity) VALUES('MR0HA3CD400387900', 4);
+INSERT INTO PASSENGER_VEHICLE(VIN, Pass_seat_capacity) VALUES('MR0HA3CD400355234', 4);
+INSERT INTO PASSENGER_VEHICLE(VIN, Pass_seat_capacity) VALUES('MR0HA3CD400323564', 4);
+INSERT INTO PASSENGER_VEHICLE(VIN, Pass_seat_capacity) VALUES('KMHH351EMNU176947', 5);
+INSERT INTO PASSENGER_VEHICLE(VIN, Pass_seat_capacity) VALUES('KMHH351EMNU156489', 5);
+INSERT INTO PASSENGER_VEHICLE(VIN, Pass_seat_capacity) VALUES('KMHH351EMNU122345', 5);
 
 
-INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity)
-    VALUES('W1W8ED6Y7LP320845', 71, 4.1),
-    ('JHDFM8JR1XXX10152', 89, 4.5),
-    ('JHDFC2AG1XXX10349', 89, 4.5),
-    ('JHDFC2AG1XXX10594', 89, 4.5),
-    ('MR0HA3CD400387900', 43, 3.2),
-    ('MR0HA3CD400355234', 43, 3.2),
-    ('MR0HA3CD400323564', 43, 3.2);
+INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('W1W8ED6Y7LP320845', 71, 4.1);
+INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('JHDFM8JR1XXX10152', 89, 4.5);
+INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('JHDFC2AG1XXX10349', 89, 4.5);
+INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('JHDFC2AG1XXX10594', 89, 4.5);
+INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('MR0HA3CD400387900', 43, 3.2);
+INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('MR0HA3CD400355234', 43, 3.2);
+INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('MR0HA3CD400323564', 43, 3.2);
 
-INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail)
-    VALUES('WBS3U920X0J966829', 23984, 'm', '2023-06-02', 1163.75, '20,000km inspection'),
-    ('WDF9066352E036011', 18126, 'r', '2023-05-18', 240,'Air-Conditioning is not cold and engine fan full speed'),
-    ('JHDFM8JR1XXX10152', 125684, 'm', '2023-05-29', 831, '125,000km service'),
-    ('JHDFM8JR1XXX10152', 125700, 'r', '2023-06-01', 831, 'investogate shudder when changing gears'),
-    ('MR0HA3CD400355234', 84569, 'r', '2023-05-11', 140, 'Investigate intermittently blowing white smoke while driving on the highway'),
-    ('KMHH351EMNU176947', 32565, 'm', '2023-05-12', 812.2, '30,000km service and an issue during cold start.');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUES('WBS3U920X0J966829', 23984, 'm', '2023-06-02', 1163.75, '20,000km inspection');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUE('WDF9066352E036011', 18126, 'r', '2023-05-18', 240,'Air-Conditioning is not cold and engine fan full speed');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUE('JHDFM8JR1XXX10152', 125684, 'm', '2023-05-29', 831, '125,000km service');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUE('JHDFM8JR1XXX10152', 125700, 'r', '2023-06-01', 831, 'investogate shudder when changing gears');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUE('MR0HA3CD400355234', 84569, 'r', '2023-05-11', 140, 'Investigate intermittently blowing white smoke while driving on the highway');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUE('KMHH351EMNU176947', 32565, 'm', '2023-05-12', 812.2, '30,000km service and an issue during cold start.');
 
-INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable)
-    VALUES('PPQ5I09LZNYU', 'Agnes', 'Wauters', 2, 'n'),
-    ('WFU6TKIW97RQ', 'Mitra', 'Brownlow', 3, 'y'),
-    ('V3R9FM7PX5RR', 'Normand', 'Fontana', 1, 'n'),
-    ('P7IYXITZINK3', 'Chetan', 'Molloy', 3, 'n'),
-    ('KS3GI45FXI0N', 'Suzana', 'Adamsen', 2, 'y'),
-    ('7NXIYPNVYOHD', 'Shalmaneser', 'Morison', 1, 'y'),
-    ('G16W6R6OUELF', 'Judita', 'Paul', 4, 'n'),
-    ('UZ4B2RHA6U62', 'Rukmini', 'Brioschi', 4, 'n'),
-    ('97E29S93TMUS', 'Glafira', 'Jacquet', 2, 'n'),
-    ('OUW35JY1U8BW', 'Darragh', 'Aliprandi', 3, 'n');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('PPQ5I09LZNYU', 'Agnes', 'Wauters', 2, 'n');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('WFU6TKIW97RQ', 'Mitra', 'Brownlow', 3, 'y');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('V3R9FM7PX5RR', 'Normand', 'Fontana', 1, 'n');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('P7IYXITZINK3', 'Chetan', 'Molloy', 3, 'n');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('KS3GI45FXI0N', 'Suzana', 'Adamsen', 2, 'y');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('7NXIYPNVYOHD', 'Shalmaneser', 'Morison', 1, 'y');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('G16W6R6OUELF', 'Judita', 'Paul', 4, 'n');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('UZ4B2RHA6U62', 'Rukmini', 'Brioschi', 4, 'n');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('97E29S93TMUS', 'Glafira', 'Jacquet', 2, 'n');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('OUW35JY1U8BW', 'Darragh', 'Aliprandi', 3, 'n');
 
 INSERT INTO LANGUAGE(LanguageName, LanguageCode) VALUE("Abkhazian", "ab");
 INSERT INTO LANGUAGE(LanguageName, LanguageCode) VALUE("Afar", "aa");

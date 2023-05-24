@@ -23,22 +23,22 @@ AND RIGHT(City, 1) = 'k'
 AND LENGTH(SUBSTRING_INDEX(City, ' ', -1)) = 4;     
 
 
-/*Q3 A list of Officials and their highest preferred languages. Sort according to 
-their First name followed by Last name. Display their full names and the 
-highest preferred languages (names and preferences). Note that there is only 
-one highest preferred language for each official. */
-SELECT  CONCAT(o.OfficialFirstName, ' ', o.OfficialLastName) AS 'Official Full Name', 
+/*Q3 A list of Officials and their highest preferred languages. 
+Sort according to their First name followed by Last name. 
+Display their full names and the highest preferred languages 
+(names and preferences). Note that there is only one highest preferred language 
+(1 is highest preference) for each official */
+SELECT CONCAT(o.OfficialFirstName, ' ', o.OfficialLastName) AS 'Official Full Name', 
 l.LanguageName AS 'Preferred Language'
-FROM Official_Language AS ol
-JOIN Official AS o
-ON ol.OfficialID = o.OfficialID
-JOIN Language AS l
-ON ol.languageCode = l.languageCode
-WHERE ol.Off_Lang_Preference = (
-    SELECT MAX(ol.Off_Lang_Preference)
-    FROM Official_Language as ol
+FROM Official_Language AS ol, Official AS o, Language AS l
+WHERE o.OfficialID = ol.OfficialID
+AND l.LanguageCode = ol.LanguageCode
+AND (ol.OfficialID, ol.Off_Lang_Preference) = (
+    SELECT ol.OfficialID, MIN(Off_Lang_Preference)
+    FROM Official_Language
 )
-ORDER BY o.OfficialFirstName, o.OfficialLastName;
+ORDER BY CONCAT(o.OfficialFirstName, ' ', o.OfficialLastName);
+
 
 
 /*Q4 The date on which the most recent Trip(s) was(were) completed. Show the 
@@ -59,8 +59,8 @@ Display the vehicle registration numbers and total kilometres travelled.
 Show the list sorted by total kilometre travelled.*/
 SELECT v.Veh_RegoNum as 'Registration Number',
 (t.EndOdometerKM - t.StartOdometerKM) AS "Total KM's travelled"
-FROM vehicle AS v, trip AS t
-WHERE (t.EndOdometerKM - t.StartOdometerKM) > 1000
+FROM vehicle v, trip t
+WHERE v.VIN = t.vin AND (t.EndOdometerKM - t.StartOdometerKM) > 1000
 ORDER BY (t.EndOdometerKM - t.StartOdometerKM) DESC;
 
 

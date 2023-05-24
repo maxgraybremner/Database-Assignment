@@ -79,17 +79,17 @@ INSERT INTO LANGUAGE(LanguageName, LanguageCode)
     ("Zulu", "zu");
 
 
-INSERT INTO COUNTRY(CountryName, CountryCode)
-    VALUES("Australia", "AU"),
-    ("Canada", "CA"),
-    ("Colombia", "CO"),
-    ("Egypt", "EG"),
-    ("Israel", "IL"),
-    ("Italy", "IT"),
-    ("Serbia", "RS"),
-    ("Spain", "ES"),
-    ("Tonga", "TO"),
-    ("Zimbabwe", "ZW"); 
+
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Australia", "AU");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Canada", "CA");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Colombia", "CO");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Egypt", "EG");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Israel", "IL");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Italy", "IT");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Serbia", "RS");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Spain", "ES");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Tonga", "TO");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Zimbabwe", "ZW"); 
 
 INSERT INTO OFFICIAL_ROLE(roleID, roleDescription)
     VALUES('EC', 'Event Co-ordinator'),
@@ -174,30 +174,30 @@ INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf)
     ('he','OUW35JY1U8BW','1');
 
 INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference)
-    VALUES('ND9N4T8L','en','5'),
-    ('ND9N4T8L','to','2'),
-    ('ND9N4T8L','ar','2'),
-    ('IT7YN37F','en','5'),
-    ('IT7YN37F','fr','4'),
-    ('IT7YN37F','zh','1'),
-    ('9KY8GJFP','es','5'),
-    ('9KY8GJFP','en','4'),
-    ('Z2J3OWJ7','ar','5'),
+    VALUES('ND9N4T8L','en','1'),
+    ('ND9N4T8L','to','3'),
+    ('ND9N4T8L','ar','3'),
+    ('IT7YN37F','en','1'),
+    ('IT7YN37F','fr','3'),
+    ('IT7YN37F','zh','5'),
+    ('9KY8GJFP','es','1'),
+    ('9KY8GJFP','en','2'),
+    ('Z2J3OWJ7','ar','1'),
     ('Z2J3OWJ7','en','3'),
-    ('6P79BNKI','ar','5'),
-    ('6P79BNKI','en','4'),
-    ('ZRFG65JG','it','5'),
+    ('6P79BNKI','ar','1'),
+    ('6P79BNKI','en','2'),
+    ('ZRFG65JG','it','1'),
     ('ZRFG65JG','es','3'),
     ('ZRFG65JG','en','3'),
-    ('S8OATL1F','sr','5'),
-    ('S8OATL1F','en','4'),
-    ('RQG16IZV','es','5'),
-    ('RQG16IZV','it','3'),
+    ('S8OATL1F','sr','1'),
+    ('S8OATL1F','en','2'),
+    ('RQG16IZV','es','1'),
+    ('RQG16IZV','it','4'),
     ('RQG16IZV','fr','3'),
-    ('T5YMTFPG','to','5'),
-    ('T5YMTFPG','en','4'),
-    ('F9336KVE','sn','5'),
-    ('F9336KVE','en','4');
+    ('T5YMTFPG','to','1'),
+    ('T5YMTFPG','en','3'),
+    ('F9336KVE','sn','1'),
+    ('F9336KVE','en','3');
 
 INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription)
     VALUES('00', 'Booking Office'),

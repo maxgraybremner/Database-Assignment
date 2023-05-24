@@ -91,149 +91,139 @@ INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Spain", "ES");
 INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Tonga", "TO");
 INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Zimbabwe", "ZW"); 
 
-INSERT INTO OFFICIAL_ROLE(roleID, roleDescription)
-    VALUES('EC', 'Event Co-ordinator'),
-    ('TO', 'Team Organiser'),
-    ('BM', 'Board Member'),
-    ('SO', 'Swimming Official'),
-    ('MA', 'Marshal');
+INSERT INTO OFFICIAL_ROLE(roleID, roleDescription) VALUES('EC', 'Event Co-ordinator');
+INSERT INTO OFFICIAL_ROLE(roleID, roleDescription) VALUES('TO', 'Team Organiser');
+INSERT INTO OFFICIAL_ROLE(roleID, roleDescription) VALUES('BM', 'Board Member');
+INSERT INTO OFFICIAL_ROLE(roleID, roleDescription) VALUES('SO', 'Swimming Official');
+INSERT INTO OFFICIAL_ROLE(roleID, roleDescription) VALUES('MA', 'Marshal');
     
-    
-INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName)
-    VALUES('ND9N4T8L', 'TO', "AU", 'Jolie', 'Cullen'),
-    ('IT7YN37F', 'BM',"CA", 'Valerie', 'Rose'),
-    ('9KY8GJFP', 'BM',"CO", 'Andrés', 'Valdez'),
-    ('Z2J3OWJ7', 'TO', "EG", 'Amani', 'Zaman'),
-    ('6P79BNKI', 'EC',"IL", 'Samia', 'Muhammad'),
-    ('ZRFG65JG', 'SO',"IT", 'Palmiro', 'Cattaneo'),
-    ('S8OATL1F', 'EC',"RS", 'Srećko', 'Tomić'),
-    ('RQG16IZV', 'SO',"ES", 'Amador', 'Trujillo'),
-    ('T5YMTFPG', 'MA',"TO", 'Tevita', 'Chen'),
-    ('F9336KVE', 'MA',"ZW", 'Kofi', 'Kamau'); 
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('ND9N4T8L', 'TO', "AU", 'Jolie', 'Cullen');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('IT7YN37F', 'BM',"CA", 'Valerie', 'Rose');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('9KY8GJFP', 'BM',"CO", 'Andrés', 'Valdez');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('Z2J3OWJ7', 'TO', "EG", 'Amani', 'Zaman');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('6P79BNKI', 'EC',"IL", 'Samia', 'Muhammad');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('ZRFG65JG', 'SO',"IT", 'Palmiro', 'Cattaneo');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('S8OATL1F', 'EC',"RS", 'Srećko', 'Tomić');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('RQG16IZV', 'SO',"ES", 'Amador', 'Trujillo');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('T5YMTFPG', 'MA',"TO", 'Tevita', 'Chen');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('F9336KVE', 'MA',"ZW", 'Kofi', 'Kamau'); 
 
-INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken)
-    VALUES("AU", 'en', 72),
-    ("AU", 'zh', 3.9),
-    ("AU", 'ar', 1.4),
-    ("AU", 'vi', 1.3), 
-    ("CA", 'en', 98),
-    ("CA", 'fr', 22.8),
-    ("CA", 'zh', 12.4),
-    ("CA", 'pa', 2.6),
-    ("CO", 'es', 99.5),
-    ("CO", 'en', 3.82), 
-    ("EG", 'ar', 78),
-    ("EG", 'en', 39.98),
-    ("IL", 'en', 84.97),
-    ("IL", 'he', 53),
-    ("IL", 'ar', 20.9),
-    ("IT", 'it', 97.41),
-    ("IT", 'en', 13.74),
-    ("IT", 'fr', 8.46),
-    ("IT", 'es', 6.56),
-    ("RS", 'sr',98),
-    ("ES", 'es', 98),
-    ("ES", 'en', 11.7),
-    ("ES", 'fr', 5.85),
-    ("ES", 'ro', 2.78),
-    ("ES", 'it', 1.93),
-    ("TO", 'to', 80.5),
-    ("TO", 'en', 15.4), 
-    ("ZW", 'en', 61.7),
-    ("ZW", 'sn', 29); 
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("AU", 'en', 72);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("AU", 'zh', 3.9);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("AU", 'ar', 1.4);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("AU", 'vi', 1.3);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("CA", 'en', 98);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("CA", 'fr', 22.8);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("CA", 'zh', 12.4);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("CA", 'pa', 2.6);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("CO", 'es', 99.5);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("CO", 'en', 3.82);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("EG", 'ar', 78);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("EG", 'en', 39.98);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("IL", 'en', 84.97);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("IL", 'he', 53);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("IL", 'ar', 20.9);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("IT", 'it', 97.41);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("IT", 'en', 13.74);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("IT", 'fr', 8.46);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("IT", 'es', 6.56);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("RS", 'sr',98);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("ES", 'es', 98);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("ES", 'en', 11.7);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("ES", 'fr', 5.85);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("ES", 'ro', 2.78);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("ES", 'it', 1.93);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("TO", 'to', 80.5);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("TO", 'en', 15.4);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("ZW", 'en', 61.7);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("ZW", 'sn', 29);
 
-INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf)
-    VALUES('EN','WFU6TKIW97RQ','2'),
-    ('FR','WFU6TKIW97RQ','5'),
-    ('zh','WFU6TKIW97RQ','4'),
-    ('en','V3R9FM7PX5RR','2'),
-    ('es','V3R9FM7PX5RR','1'),
-    ('sn','V3R9FM7PX5RR','2'),
-    ('to','V3R9FM7PX5RR','3'),
-    ('en','P7IYXITZINK3','5'),
-    ('fr','P7IYXITZINK3','3'),
-    ('sn','P7IYXITZINK3','2'),
-    ('en','KS3GI45FXI0N','2'),
-    ('sr','KS3GI45FXI0N','4'),
-    ('ar','KS3GI45FXI0N','3'),
-    ('pa','KS3GI45FXI0N','1'),
-    ('to','7NXIYPNVYOHD','4'),
-    ('pa','7NXIYPNVYOHD','1'),
-    ('zh','7NXIYPNVYOHD','5'),
-    ('en','G16W6R6OUELF','3'),
-    ('vi','G16W6R6OUELF','1'),
-    ('he','G16W6R6OUELF','3'),
-    ('it','UZ4B2RHA6U62','2'),
-    ('en','UZ4B2RHA6U62','3'),
-    ('to','UZ4B2RHA6U62','5'),
-    ('fr','97E29S93TMUS','1'),
-    ('es','97E29S93TMUS','3'),
-    ('it','97E29S93TMUS','5'),
-    ('ar','OUW35JY1U8BW','2'),
-    ('vi','OUW35JY1U8BW','5'),
-    ('he','OUW35JY1U8BW','1');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('EN','WFU6TKIW97RQ','2');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('FR','WFU6TKIW97RQ','5');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('zh','WFU6TKIW97RQ','4');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','V3R9FM7PX5RR','2');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('es','V3R9FM7PX5RR','1');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('sn','V3R9FM7PX5RR','2');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('to','V3R9FM7PX5RR','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','P7IYXITZINK3','5');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('fr','P7IYXITZINK3','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('sn','P7IYXITZINK3','2');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','KS3GI45FXI0N','2');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('sr','KS3GI45FXI0N','4');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('ar','KS3GI45FXI0N','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('pa','KS3GI45FXI0N','1');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('to','7NXIYPNVYOHD','4');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('pa','7NXIYPNVYOHD','1');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('zh','7NXIYPNVYOHD','5');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','G16W6R6OUELF','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('vi','G16W6R6OUELF','1');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('he','G16W6R6OUELF','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('it','UZ4B2RHA6U62','2');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','UZ4B2RHA6U62','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('to','UZ4B2RHA6U62','5');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('fr','97E29S93TMUS','1');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('es','97E29S93TMUS','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('it','97E29S93TMUS','5');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('ar','OUW35JY1U8BW','2');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('vi','OUW35JY1U8BW','5');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('he','OUW35JY1U8BW','1');
 
-INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference)
-    VALUES('ND9N4T8L','en','1'),
-    ('ND9N4T8L','to','3'),
-    ('ND9N4T8L','ar','3'),
-    ('IT7YN37F','en','1'),
-    ('IT7YN37F','fr','3'),
-    ('IT7YN37F','zh','5'),
-    ('9KY8GJFP','es','1'),
-    ('9KY8GJFP','en','2'),
-    ('Z2J3OWJ7','ar','1'),
-    ('Z2J3OWJ7','en','3'),
-    ('6P79BNKI','ar','1'),
-    ('6P79BNKI','en','2'),
-    ('ZRFG65JG','it','1'),
-    ('ZRFG65JG','es','3'),
-    ('ZRFG65JG','en','3'),
-    ('S8OATL1F','sr','1'),
-    ('S8OATL1F','en','2'),
-    ('RQG16IZV','es','1'),
-    ('RQG16IZV','it','4'),
-    ('RQG16IZV','fr','3'),
-    ('T5YMTFPG','to','1'),
-    ('T5YMTFPG','en','3'),
-    ('F9336KVE','sn','1'),
-    ('F9336KVE','en','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('ND9N4T8L','en','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('ND9N4T8L','to','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('ND9N4T8L','ar','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('IT7YN37F','en','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('IT7YN37F','fr','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('IT7YN37F','zh','5');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('9KY8GJFP','es','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('9KY8GJFP','en','2');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('Z2J3OWJ7','ar','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('Z2J3OWJ7','en','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('6P79BNKI','ar','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('6P79BNKI','en','2');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('ZRFG65JG','it','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('ZRFG65JG','es','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('ZRFG65JG','en','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('S8OATL1F','sr','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('S8OATL1F','en','2');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('RQG16IZV','es','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('RQG16IZV','it','4');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('RQG16IZV','fr','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('T5YMTFPG','to','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('T5YMTFPG','en','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('F9336KVE','sn','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('F9336KVE','en','3');
 
-INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription)
-    VALUES('00', 'Booking Office'),
-    ('01', 'Head Office'),
-    ('02', 'Car Park'),
-    ('03', 'Warehouse'),
-    ('04', 'Guzman y Gomez'),
-    ('05', 'Swimming Pool'),
-    ('06', 'Running Track'),
-    ('07', 'Velodrome'),
-    ('08', 'Soccer Field'),
-    ('09', 'Basketball Court'),
-    ('10', 'Marathon Start'),
-    ('11', 'Marathon End'),
-    ('12', 'Beach'),
-    ('13', 'Accomodation'),
-    ('14', 'Airport');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('00', 'Booking Office');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('01', 'Head Office');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('02', 'Car Park');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('03', 'Warehouse');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('04', 'Guzman y Gomez');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('05', 'Swimming Pool');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('06', 'Running Track');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('07', 'Velodrome');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('08', 'Soccer Field');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('09', 'Basketball Court');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('10', 'Marathon Start');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('11', 'Marathon End');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('12', 'Beach');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('13', 'Accomodation');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('14', 'Airport');
 
-INSERT INTO LOCATION (LocationTypeID, StreetNo, StreetName, City, State, Postcode)
-    VALUES('13', '30', 'Parkes Road', 'Seaholme', 'VIC', '3018'),
-    ('05', '27', 'Gilbert Street', 'Lapoinya', 'TAS', '7325'),
-    ('14', '69', 'Commercial Street', 'Newham Park', 'VIC', '3442'),
-    ('08', '28', 'Boland Park', 'Dingo Beach', 'QLD', '4800'),
-    ('04', '67', 'Stanley Drive', 'Tuckombil Tilk', 'NSW', '2477'),
-    ('07', '21', 'Magnolia Drive', 'Caravan Head', 'NSW', '2225'),
-    ('09', '4202', 'Asbury Court', 'Maitland', 'NSW', '2320');
+INSERT INTO LOCATION (LocationTypeID, StreetNo, StreetName, City, State, Postcode) VALUES('13', '30', 'Parkes Road', 'Seaholme', 'VIC', '3018');
+INSERT INTO LOCATION (LocationTypeID, StreetNo, StreetName, City, State, Postcode) VALUES('05', '27', 'Gilbert Street', 'Lapoinya', 'TAS', '7325');
+INSERT INTO LOCATION (LocationTypeID, StreetNo, StreetName, City, State, Postcode) VALUES('14', '69', 'Commercial Street', 'Newham Park', 'VIC', '3442');
+INSERT INTO LOCATION (LocationTypeID, StreetNo, StreetName, City, State, Postcode) VALUES('08', '28', 'Boland Park', 'Dingo Beach', 'QLD', '4800');
+INSERT INTO LOCATION (LocationTypeID, StreetNo, StreetName, City, State, Postcode) VALUES('04', '67', 'Stanley Drive', 'Tuckombil Tilk', 'NSW', '2477');
+INSERT INTO LOCATION (LocationTypeID, StreetNo, StreetName, City, State, Postcode) VALUES('07', '21', 'Magnolia Drive', 'Caravan Head', 'NSW', '2225');
+INSERT INTO LOCATION (LocationTypeID, StreetNo, StreetName, City, State, Postcode) VALUES('09', '4202', 'Asbury Court', 'Maitland', 'NSW', '2320');
 
-INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) 
-    VALUES('97E29S93TMUS', 'ND9N4T8L', 'en', 1, 5, 'WBS3U920X0J966829', '2023-02-08 10:30:00', '2023-02-08 11:00:00', '2023-02-08 09:15:25', '2023-02-08 11:45:00', 24054, 24084),
-    ('V3R9FM7PX5RR', '9KY8GJFP', 'es', 2, 3, 'JHDFM8JR1XXX10152', '2023-02-10 05:00:00', '2023-02-10 08:00:00', '2023-02-10 05:12:00', '2023-02-10 08:05:20', 125684, 127517),
-    ('7NXIYPNVYOHD', 'T5YMTFPG', 'to', 6, 7, 'KMHH351EMNU176947', '2023-02-12 09:30:00', '2023-02-12 11:00:00', '2023-02-12 09:46:13', '2023-02-12 11:05:30', 32615, 32995),
-    ('V3R9FM7PX5RR', 'F9336KVE', 'sn', 7, 1, 'WBA7T2C02LCD06343', '2023-02-12 21:00:00', '2023-02-12 22:30:00', '2023-02-12 21:23:01', '2023-02-12 22:47:05', 5984, 7034),
-    ('PPQ5I09LZNYU', 'ZRFG65JG', 'it', 3, 2, 'MR0HA3CD400355234', '2023-02-08 07:45:00', '2023-02-08 11:00:00', '2023-02-08 07:12:12', '2023-02-08 11:42:10', 84569, 84648),
-    ('UZ4B2RHA6U62', 'T5YMTFPG', 'to', 4, 6, 'MR0HA3CD400355234', '2023-07-10 12:15:00', '2023-07-10 14:30:00', NULL, NULL, NULL, NULL),
-    ('97E29S93TMUS', 'RQG16IZV', 'es', 5, 2, 'WBA7T2C02LCD06343', '2023-07-12 15:30:00', '2023-07-12 16:15:00', NULL, NULL, NULL, NULL),
-    ('UZ4B2RHA6U62', '9KY8GJFP', 'es', 1, 6, 'MR0HA3CD400355234', '2023-07-13 5:15:00', '2023-07-13 6:30:00', NULL, NULL, NULL, NULL),
-    ('97E29S93TMUS', 'RQG16IZV', 'es', 5, 2, 'WBA7T2C02LCD06343', '2023-07-16 15:30:00', '2023-07-16 16:15:00', NULL, NULL, NULL, NULL),
-    ('UZ4B2RHA6U62', '9KY8GJFP', 'es', 1, 6, 'MR0HA3CD400355234', '2023-07-20 5:15:00', '2023-07-20 6:30:00', NULL, NULL, NULL, NULL);
-
+INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('97E29S93TMUS', 'ND9N4T8L', 'en', 1, 5, 'WBS3U920X0J966829', '2023-02-08 10:30:00', '2023-02-08 11:00:00', '2023-02-08 09:15:25', '2023-02-08 11:45:00', 24054, 24084);
+INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('V3R9FM7PX5RR', '9KY8GJFP', 'es', 2, 3, 'JHDFM8JR1XXX10152', '2023-02-10 05:00:00', '2023-02-10 08:00:00', '2023-02-10 05:12:00', '2023-02-10 08:05:20', 125684, 127517);
+INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('7NXIYPNVYOHD', 'T5YMTFPG', 'to', 6, 7, 'KMHH351EMNU176947', '2023-02-12 09:30:00', '2023-02-12 11:00:00', '2023-02-12 09:46:13', '2023-02-12 11:05:30', 32615, 32995);
+INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('V3R9FM7PX5RR', 'F9336KVE', 'sn', 7, 1, 'WBA7T2C02LCD06343', '2023-02-12 21:00:00', '2023-02-12 22:30:00', '2023-02-12 21:23:01', '2023-02-12 22:47:05', 5984, 7034);
+INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('PPQ5I09LZNYU', 'ZRFG65JG', 'it', 3, 2, 'MR0HA3CD400355234', '2023-02-08 07:45:00', '2023-02-08 11:00:00', '2023-02-08 07:12:12', '2023-02-08 11:42:10', 84569, 84648);
+INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('UZ4B2RHA6U62', 'T5YMTFPG', 'to', 4, 6, 'MR0HA3CD400355234', '2023-07-10 12:15:00', '2023-07-10 14:30:00', NULL, NULL, NULL, NULL);
+INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('97E29S93TMUS', 'RQG16IZV', 'es', 5, 2, 'WBA7T2C02LCD06343', '2023-07-12 15:30:00', '2023-07-12 16:15:00', NULL, NULL, NULL, NULL);
+INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('UZ4B2RHA6U62', '9KY8GJFP', 'es', 1, 6, 'MR0HA3CD400355234', '2023-07-13 5:15:00', '2023-07-13 6:30:00', NULL, NULL, NULL, NULL);
+INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('97E29S93TMUS', 'RQG16IZV', 'es', 5, 2, 'WBA7T2C02LCD06343', '2023-07-16 15:30:00', '2023-07-16 16:15:00', NULL, NULL, NULL, NULL);
+INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('UZ4B2RHA6U62', '9KY8GJFP', 'es', 1, 6, 'MR0HA3CD400355234', '2023-07-20 5:15:00', '2023-07-20 6:30:00', NULL, NULL, NULL, NULL);

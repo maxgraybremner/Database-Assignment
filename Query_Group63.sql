@@ -27,15 +27,18 @@ AND LENGTH(SUBSTRING_INDEX(City, ' ', -1)) = 4;
 Sort according to their First name followed by Last name. 
 Display their full names and the highest preferred languages 
 (names and preferences). Note that there is only one highest preferred language 
-(1 is highest preference) for each official*/
-SELECT  CONCAT(o.OfficialFirstName, ' ', o.OfficialLastName) AS 'Official Full Name', 
+(1 is highest preference) for each official */
+SELECT CONCAT(o.OfficialFirstName, ' ', o.OfficialLastName) AS 'Official Full Name', 
 l.LanguageName AS 'Preferred Language'
 FROM Official_Language AS ol, Official AS o, Language AS l
-WHERE ol.Off_Lang_Preference = (
-    SELECT MIN(ol.Off_Lang_Preference)
-    FROM Official_Language as ol
+WHERE o.OfficialID = ol.OfficialID
+AND l.LanguageCode = ol.LanguageCode
+AND (ol.OfficialID, ol.Off_Lang_Preference) = (
+    SELECT ol.OfficialID, MIN(Off_Lang_Preference)
+    FROM Official_Language
 )
-ORDER BY o.OfficialFirstName, o.OfficialLastName;
+ORDER BY CONCAT(o.OfficialFirstName, ' ', o.OfficialLastName);
+
 
 
 /*Q4 The date on which the most recent Trip(s) was(were) completed. Show the 

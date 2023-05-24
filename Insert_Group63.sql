@@ -58,17 +58,16 @@ INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, 
     ('MR0HA3CD400355234', 84569, 'r', '2023-05-11', 140, 'Investigate intermittently blowing white smoke while driving on the highway'),
     ('KMHH351EMNU176947', 32565, 'm', '2023-05-12', 812.2, '30,000km service and an issue during cold start.');
 
-INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable)
-    VALUES('PPQ5I09LZNYU', 'Agnes', 'Wauters', 2, 'n'),
-    ('WFU6TKIW97RQ', 'Mitra', 'Brownlow', 3, 'y'),
-    ('V3R9FM7PX5RR', 'Normand', 'Fontana', 1, 'n'),
-    ('P7IYXITZINK3', 'Chetan', 'Molloy', 3, 'n'),
-    ('KS3GI45FXI0N', 'Suzana', 'Adamsen', 2, 'y'),
-    ('7NXIYPNVYOHD', 'Shalmaneser', 'Morison', 1, 'y'),
-    ('G16W6R6OUELF', 'Judita', 'Paul', 4, 'n'),
-    ('UZ4B2RHA6U62', 'Rukmini', 'Brioschi', 4, 'n'),
-    ('97E29S93TMUS', 'Glafira', 'Jacquet', 2, 'n'),
-    ('OUW35JY1U8BW', 'Darragh', 'Aliprandi', 3, 'n');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('PPQ5I09LZNYU', 'Agnes', 'Wauters', 2, 'n');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('WFU6TKIW97RQ', 'Mitra', 'Brownlow', 3, 'y');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('V3R9FM7PX5RR', 'Normand', 'Fontana', 1, 'n');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('P7IYXITZINK3', 'Chetan', 'Molloy', 3, 'n');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('KS3GI45FXI0N', 'Suzana', 'Adamsen', 2, 'y');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('7NXIYPNVYOHD', 'Shalmaneser', 'Morison', 1, 'y');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('G16W6R6OUELF', 'Judita', 'Paul', 4, 'n');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('UZ4B2RHA6U62', 'Rukmini', 'Brioschi', 4, 'n');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('97E29S93TMUS', 'Glafira', 'Jacquet', 2, 'n');
+INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('OUW35JY1U8BW', 'Darragh', 'Aliprandi', 3, 'n');
 
 INSERT INTO LANGUAGE(LanguageName, LanguageCode) VALUE("Abkhazian", "ab");
 INSERT INTO LANGUAGE(LanguageName, LanguageCode) VALUE("Afar", "aa");

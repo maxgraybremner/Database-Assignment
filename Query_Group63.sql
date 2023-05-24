@@ -56,9 +56,11 @@ Display the vehicle registration numbers and total kilometres travelled.
 Show the list sorted by total kilometre travelled.*/
 SELECT v.Veh_RegoNum as 'Registration Number',
 (t.EndOdometerKM - t.StartOdometerKM) AS "Total KM's travelled"
-FROM vehicle AS v, trip AS t
-WHERE (t.EndOdometerKM - t.StartOdometerKM) > 1000
+FROM vehicle v, trip t
+WHERE v.VIN = t.vin AND (t.EndOdometerKM - t.StartOdometerKM) > 1000
 ORDER BY (t.EndOdometerKM - t.StartOdometerKM) DESC;
+
+
 
 
 /*Q6 Find the Passenger Vehicles whose one or more (single) repair costs were 

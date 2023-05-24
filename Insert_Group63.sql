@@ -79,17 +79,17 @@ INSERT INTO LANGUAGE(LanguageName, LanguageCode)
     ("Zulu", "zu");
 
 
-INSERT INTO COUNTRY(CountryName, CountryCode)
-    VALUES("Australia", "AU"),
-    ("Canada", "CA"),
-    ("Colombia", "CO"),
-    ("Egypt", "EG"),
-    ("Israel", "IL"),
-    ("Italy", "IT"),
-    ("Serbia", "RS"),
-    ("Spain", "ES"),
-    ("Tonga", "TO"),
-    ("Zimbabwe", "ZW"); 
+
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Australia", "AU");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Canada", "CA");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Colombia", "CO");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Egypt", "EG");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Israel", "IL");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Italy", "IT");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Serbia", "RS");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Spain", "ES");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Tonga", "TO");
+INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Zimbabwe", "ZW"); 
 
 INSERT INTO OFFICIAL_ROLE(roleID, roleDescription)
     VALUES('EC', 'Event Co-ordinator'),

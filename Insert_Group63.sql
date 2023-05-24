@@ -91,56 +91,52 @@ INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Spain", "ES");
 INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Tonga", "TO");
 INSERT INTO COUNTRY(CountryName, CountryCode) VALUES("Zimbabwe", "ZW"); 
 
-INSERT INTO OFFICIAL_ROLE(roleID, roleDescription)
-    VALUES('EC', 'Event Co-ordinator'),
-    ('TO', 'Team Organiser'),
-    ('BM', 'Board Member'),
-    ('SO', 'Swimming Official'),
-    ('MA', 'Marshal');
+INSERT INTO OFFICIAL_ROLE(roleID, roleDescription) VALUES('EC', 'Event Co-ordinator');
+INSERT INTO OFFICIAL_ROLE(roleID, roleDescription) VALUES('TO', 'Team Organiser');
+INSERT INTO OFFICIAL_ROLE(roleID, roleDescription) VALUES('BM', 'Board Member');
+INSERT INTO OFFICIAL_ROLE(roleID, roleDescription) VALUES('SO', 'Swimming Official');
+INSERT INTO OFFICIAL_ROLE(roleID, roleDescription) VALUES('MA', 'Marshal');
     
-    
-INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName)
-    VALUES('ND9N4T8L', 'TO', "AU", 'Jolie', 'Cullen'),
-    ('IT7YN37F', 'BM',"CA", 'Valerie', 'Rose'),
-    ('9KY8GJFP', 'BM',"CO", 'Andrés', 'Valdez'),
-    ('Z2J3OWJ7', 'TO', "EG", 'Amani', 'Zaman'),
-    ('6P79BNKI', 'EC',"IL", 'Samia', 'Muhammad'),
-    ('ZRFG65JG', 'SO',"IT", 'Palmiro', 'Cattaneo'),
-    ('S8OATL1F', 'EC',"RS", 'Srećko', 'Tomić'),
-    ('RQG16IZV', 'SO',"ES", 'Amador', 'Trujillo'),
-    ('T5YMTFPG', 'MA',"TO", 'Tevita', 'Chen'),
-    ('F9336KVE', 'MA',"ZW", 'Kofi', 'Kamau'); 
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('ND9N4T8L', 'TO', "AU", 'Jolie', 'Cullen');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('IT7YN37F', 'BM',"CA", 'Valerie', 'Rose');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('9KY8GJFP', 'BM',"CO", 'Andrés', 'Valdez');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('Z2J3OWJ7', 'TO', "EG", 'Amani', 'Zaman');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('6P79BNKI', 'EC',"IL", 'Samia', 'Muhammad');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('ZRFG65JG', 'SO',"IT", 'Palmiro', 'Cattaneo');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('S8OATL1F', 'EC',"RS", 'Srećko', 'Tomić');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('RQG16IZV', 'SO',"ES", 'Amador', 'Trujillo');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('T5YMTFPG', 'MA',"TO", 'Tevita', 'Chen');
+INSERT INTO OFFICIAL(OfficialID, OfficialRole, CountryCode, OfficialFirstName, OfficialLastName) VALUES('F9336KVE', 'MA',"ZW", 'Kofi', 'Kamau'); 
 
-INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken)
-    VALUES("AU", 'en', 72),
-    ("AU", 'zh', 3.9),
-    ("AU", 'ar', 1.4),
-    ("AU", 'vi', 1.3), 
-    ("CA", 'en', 98),
-    ("CA", 'fr', 22.8),
-    ("CA", 'zh', 12.4),
-    ("CA", 'pa', 2.6),
-    ("CO", 'es', 99.5),
-    ("CO", 'en', 3.82), 
-    ("EG", 'ar', 78),
-    ("EG", 'en', 39.98),
-    ("IL", 'en', 84.97),
-    ("IL", 'he', 53),
-    ("IL", 'ar', 20.9),
-    ("IT", 'it', 97.41),
-    ("IT", 'en', 13.74),
-    ("IT", 'fr', 8.46),
-    ("IT", 'es', 6.56),
-    ("RS", 'sr',98),
-    ("ES", 'es', 98),
-    ("ES", 'en', 11.7),
-    ("ES", 'fr', 5.85),
-    ("ES", 'ro', 2.78),
-    ("ES", 'it', 1.93),
-    ("TO", 'to', 80.5),
-    ("TO", 'en', 15.4), 
-    ("ZW", 'en', 61.7),
-    ("ZW", 'sn', 29); 
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("AU", 'en', 72);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("AU", 'zh', 3.9);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("AU", 'ar', 1.4);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("AU", 'vi', 1.3);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("CA", 'en', 98);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("CA", 'fr', 22.8);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("CA", 'zh', 12.4);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("CA", 'pa', 2.6);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("CO", 'es', 99.5);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("CO", 'en', 3.82);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("EG", 'ar', 78);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("EG", 'en', 39.98);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("IL", 'en', 84.97);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("IL", 'he', 53);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("IL", 'ar', 20.9);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("IT", 'it', 97.41);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("IT", 'en', 13.74);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("IT", 'fr', 8.46);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("IT", 'es', 6.56);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("RS", 'sr',98);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("ES", 'es', 98);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("ES", 'en', 11.7);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("ES", 'fr', 5.85);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("ES", 'ro', 2.78);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("ES", 'it', 1.93);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("TO", 'to', 80.5);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("TO", 'en', 15.4);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("ZW", 'en', 61.7);
+INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES("ZW", 'sn', 29);
 
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('EN','WFU6TKIW97RQ','2');
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('FR','WFU6TKIW97RQ','5');

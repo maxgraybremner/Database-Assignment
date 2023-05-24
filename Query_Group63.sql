@@ -81,26 +81,30 @@ HAVING SUM(mr.mr_cost) > (
     FROM MAINTENANCE_REPAIR
 );
 
-/*Q7 A list of all Drivers who have not been involved in any trip yet. Display the 
-drivers’ full names, security clearance levels, and the languages they speak 
-with at their highest proficiency levels. Note that a driver may speak in 
-more than one language at his/her highest level of proficiency. 
+/*Q7 A list of all Drivers who have not been involved in any trip yet 
+(i.e., haven’t actually driven for any trips yet). 
+Display the drivers’ full names, security clearance levels, 
+and the languages they speak with at their highest proficiency levels. 
+Note that a driver may speak in more than one language at his/her highest level 
+of proficiency, which can be 5 or below.
 */
 SELECT CONCAT(d.DriverFirstName, ' ', d.DriverLastName) AS 'Driver Full Name',
 d.ClearanceLevel AS 'Security Clearance Level',
-l.LanguageName AS "Driver's most proficient language"
-FROM driver AS d, driver_language as dl, language AS l
-WHERE NOT EXISTS (
+l.LanguageName AS "Driver's most proficient language",
+dl.DriverLanguageProf
+FROM DRIVER AS D, driver_language AS dl, language AS l
+WHERE d.DriverLicenseNum NOT IN (
     SELECT t.DriverLicenseNum
     FROM trip AS t
-    WHERE t.DriverLicenseNum = d.DriverLicenseNum
+    WHERE t.EndOdometerKM IS NOT NULL
 )
+AND l.languageCode = dl.languageCode
+AND dl.DriverLicenseNum = d.DriverLicenseNum
 AND dl.DriverLanguageProf = (
-    SELECT MAX(DriverLanguageProf)
-    FROM driver_language as dls
-    WHERE dl.DriverLicenseNum = dls.DriverLicenseNum
+    SELECT MAX(dl2.DriverLanguageProf)
+    FROM driver_language AS dl2
+    WHERE dl2.DriverLicenseNum = d.DriverLicenseNum
 );
-
 
 /*Q8 For each vehicle type (e.g., Sedan), list the number of future bookings of 
 vehicles if number of future bookings in each type is more than 2. For each 

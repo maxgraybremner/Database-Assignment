@@ -74,18 +74,7 @@ pv.Pass_seat_capacity AS "Seat capacity",
 CONCAT("$", SUM(mr.mr_cost)) AS "Total Cost"
 FROM MAINTENANCE_REPAIR AS mr, vehicle AS v, passenger_vehicle AS pv
 WHERE mr.VIN = v.VIN
-GROUP BY mr.VIN
-HAVING SUM(mr.mr_cost) > (
-    SELECT AVG(MR_COST)
-    FROM MAINTENANCE_REPAIR
-);
-
-SELECT v.Veh_RegoNum AS "Vehicle Registration Number",
-v.Veh_Make AS "Vehicle Make",
-v.Veh_Model AS "Vehicle Model",
-CONCAT("$", SUM(mr.mr_cost)) AS "Total Cost"
-FROM MAINTENANCE_REPAIR AS mr, vehicle AS v
-WHERE mr.VIN = v.VIN
+AND v.VIN = pv.VIN
 GROUP BY mr.VIN
 HAVING SUM(mr.mr_cost) > (
     SELECT AVG(MR_COST)

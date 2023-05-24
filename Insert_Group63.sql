@@ -309,10 +309,10 @@ INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken) VALUES
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('EN','WFU6TKIW97RQ','2');
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('FR','WFU6TKIW97RQ','5');
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('zh','WFU6TKIW97RQ','4');
-INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','V3R9FM7PX5RR','2');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','V3R9FM7PX5RR','5');
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('es','V3R9FM7PX5RR','1');
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('sn','V3R9FM7PX5RR','2');
-INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('to','V3R9FM7PX5RR','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('to','V3R9FM7PX5RR','5');
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','P7IYXITZINK3','5');
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('fr','P7IYXITZINK3','3');
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('sn','P7IYXITZINK3','2');
@@ -323,9 +323,9 @@ INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf)
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('to','7NXIYPNVYOHD','4');
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('pa','7NXIYPNVYOHD','1');
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('zh','7NXIYPNVYOHD','5');
-INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','G16W6R6OUELF','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','G16W6R6OUELF','5');
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('vi','G16W6R6OUELF','1');
-INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('he','G16W6R6OUELF','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('he','G16W6R6OUELF','5');
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('it','UZ4B2RHA6U62','2');
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','UZ4B2RHA6U62','3');
 INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('to','UZ4B2RHA6U62','5');

@@ -199,22 +199,22 @@ INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference)
     ('F9336KVE','sn','1'),
     ('F9336KVE','en','3');
 
-INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription)
-    VALUES('00', 'Booking Office'),
-    ('01', 'Head Office'),
-    ('02', 'Car Park'),
-    ('03', 'Warehouse'),
-    ('04', 'Guzman y Gomez'),
-    ('05', 'Swimming Pool'),
-    ('06', 'Running Track'),
-    ('07', 'Velodrome'),
-    ('08', 'Soccer Field'),
-    ('09', 'Basketball Court'),
-    ('10', 'Marathon Start'),
-    ('11', 'Marathon End'),
-    ('12', 'Beach'),
-    ('13', 'Accomodation'),
-    ('14', 'Airport');
+
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('00', 'Booking Office');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('01', 'Head Office');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('02', 'Car Park');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('03', 'Warehouse');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('04', 'Guzman y Gomez');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('05', 'Swimming Pool');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('06', 'Running Track');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('07', 'Velodrome');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('08', 'Soccer Field');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('09', 'Basketball Court');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('10', 'Marathon Start');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('11', 'Marathon End');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('12', 'Beach');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('13', 'Accomodation');
+INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('14', 'Airport');
 
 INSERT INTO LOCATION (LocationTypeID, StreetNo, StreetName, City, State, Postcode) VALUES('13', '30', 'Parkes Road', 'Seaholme', 'VIC', '3018');
 INSERT INTO LOCATION (LocationTypeID, StreetNo, StreetName, City, State, Postcode) VALUES('05', '27', 'Gilbert Street', 'Lapoinya', 'TAS', '7325');

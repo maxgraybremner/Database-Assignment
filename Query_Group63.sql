@@ -64,8 +64,6 @@ WHERE v.VIN = t.vin AND (t.EndOdometerKM - t.StartOdometerKM) > 1000
 ORDER BY (t.EndOdometerKM - t.StartOdometerKM) DESC;
 
 
-
-
 /*Q6 Find the Passenger Vehicles whose one or more (single) repair costs were 
 more than the average repair cost of all vehicles. For each vehicle, display 
 the vehicle registration number, make, model, seat capacity, and total repair 

@@ -142,63 +142,60 @@ INSERT INTO COUNTRY_LANGUAGE(CountryCode, LanguageCode, PercentageSpoken)
     ("ZW", 'en', 61.7),
     ("ZW", 'sn', 29); 
 
-INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf)
-    VALUES('EN','WFU6TKIW97RQ','2'),
-    ('FR','WFU6TKIW97RQ','5'),
-    ('zh','WFU6TKIW97RQ','4'),
-    ('en','V3R9FM7PX5RR','2'),
-    ('es','V3R9FM7PX5RR','1'),
-    ('sn','V3R9FM7PX5RR','2'),
-    ('to','V3R9FM7PX5RR','3'),
-    ('en','P7IYXITZINK3','5'),
-    ('fr','P7IYXITZINK3','3'),
-    ('sn','P7IYXITZINK3','2'),
-    ('en','KS3GI45FXI0N','2'),
-    ('sr','KS3GI45FXI0N','4'),
-    ('ar','KS3GI45FXI0N','3'),
-    ('pa','KS3GI45FXI0N','1'),
-    ('to','7NXIYPNVYOHD','4'),
-    ('pa','7NXIYPNVYOHD','1'),
-    ('zh','7NXIYPNVYOHD','5'),
-    ('en','G16W6R6OUELF','3'),
-    ('vi','G16W6R6OUELF','1'),
-    ('he','G16W6R6OUELF','3'),
-    ('it','UZ4B2RHA6U62','2'),
-    ('en','UZ4B2RHA6U62','3'),
-    ('to','UZ4B2RHA6U62','5'),
-    ('fr','97E29S93TMUS','1'),
-    ('es','97E29S93TMUS','3'),
-    ('it','97E29S93TMUS','5'),
-    ('ar','OUW35JY1U8BW','2'),
-    ('vi','OUW35JY1U8BW','5'),
-    ('he','OUW35JY1U8BW','1');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('EN','WFU6TKIW97RQ','2');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('FR','WFU6TKIW97RQ','5');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('zh','WFU6TKIW97RQ','4');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','V3R9FM7PX5RR','2');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('es','V3R9FM7PX5RR','1');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('sn','V3R9FM7PX5RR','2');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('to','V3R9FM7PX5RR','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','P7IYXITZINK3','5');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('fr','P7IYXITZINK3','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('sn','P7IYXITZINK3','2');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','KS3GI45FXI0N','2');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('sr','KS3GI45FXI0N','4');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('ar','KS3GI45FXI0N','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('pa','KS3GI45FXI0N','1');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('to','7NXIYPNVYOHD','4');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('pa','7NXIYPNVYOHD','1');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('zh','7NXIYPNVYOHD','5');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','G16W6R6OUELF','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('vi','G16W6R6OUELF','1');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('he','G16W6R6OUELF','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('it','UZ4B2RHA6U62','2');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('en','UZ4B2RHA6U62','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('to','UZ4B2RHA6U62','5');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('fr','97E29S93TMUS','1');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('es','97E29S93TMUS','3');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('it','97E29S93TMUS','5');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('ar','OUW35JY1U8BW','2');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('vi','OUW35JY1U8BW','5');
+INSERT INTO DRIVER_LANGUAGE (LanguageCode, DriverLicenseNum, DriverLanguageProf) VALUES('he','OUW35JY1U8BW','1');
 
-INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference)
-    VALUES('ND9N4T8L','en','1'),
-    ('ND9N4T8L','to','3'),
-    ('ND9N4T8L','ar','3'),
-    ('IT7YN37F','en','1'),
-    ('IT7YN37F','fr','3'),
-    ('IT7YN37F','zh','5'),
-    ('9KY8GJFP','es','1'),
-    ('9KY8GJFP','en','2'),
-    ('Z2J3OWJ7','ar','1'),
-    ('Z2J3OWJ7','en','3'),
-    ('6P79BNKI','ar','1'),
-    ('6P79BNKI','en','2'),
-    ('ZRFG65JG','it','1'),
-    ('ZRFG65JG','es','3'),
-    ('ZRFG65JG','en','3'),
-    ('S8OATL1F','sr','1'),
-    ('S8OATL1F','en','2'),
-    ('RQG16IZV','es','1'),
-    ('RQG16IZV','it','4'),
-    ('RQG16IZV','fr','3'),
-    ('T5YMTFPG','to','1'),
-    ('T5YMTFPG','en','3'),
-    ('F9336KVE','sn','1'),
-    ('F9336KVE','en','3');
-
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('ND9N4T8L','en','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('ND9N4T8L','to','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('ND9N4T8L','ar','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('IT7YN37F','en','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('IT7YN37F','fr','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('IT7YN37F','zh','5');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('9KY8GJFP','es','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('9KY8GJFP','en','2');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('Z2J3OWJ7','ar','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('Z2J3OWJ7','en','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('6P79BNKI','ar','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('6P79BNKI','en','2');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('ZRFG65JG','it','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('ZRFG65JG','es','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('ZRFG65JG','en','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('S8OATL1F','sr','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('S8OATL1F','en','2');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('RQG16IZV','es','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('RQG16IZV','it','4');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('RQG16IZV','fr','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('T5YMTFPG','to','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('T5YMTFPG','en','3');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('F9336KVE','sn','1');
+INSERT INTO OFFICIAL_LANGUAGE (OfficialID, LanguageCode, Off_Lang_Preference) VALUES('F9336KVE','en','3');
 
 INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('00', 'Booking Office');
 INSERT INTO LOCATION_TYPE (LocTypeID, LocTypeDescription) VALUES('01', 'Head Office');

@@ -23,19 +23,16 @@ AND RIGHT(City, 1) = 'k'
 AND LENGTH(SUBSTRING_INDEX(City, ' ', -1)) = 4;     
 
 
-/*Q3 A list of Officials and their highest preferred languages. Sort according to 
-their First name followed by Last name. Display their full names and the 
-highest preferred languages (names and preferences). Note that there is only 
-one highest preferred language for each official. */
+/*Q3 A list of Officials and their highest preferred languages. 
+Sort according to their First name followed by Last name. 
+Display their full names and the highest preferred languages 
+(names and preferences). Note that there is only one highest preferred language 
+(1 is highest preference) for each official*/
 SELECT  CONCAT(o.OfficialFirstName, ' ', o.OfficialLastName) AS 'Official Full Name', 
 l.LanguageName AS 'Preferred Language'
-FROM Official_Language AS ol
-JOIN Official AS o
-ON ol.OfficialID = o.OfficialID
-JOIN Language AS l
-ON ol.languageCode = l.languageCode
+FROM Official_Language AS ol, Official AS o, Language AS l
 WHERE ol.Off_Lang_Preference = (
-    SELECT MAX(ol.Off_Lang_Preference)
+    SELECT MIN(ol.Off_Lang_Preference)
     FROM Official_Language as ol
 )
 ORDER BY o.OfficialFirstName, o.OfficialLastName;

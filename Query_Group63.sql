@@ -101,9 +101,9 @@ WHERE d.DriverLicenseNum NOT IN (
 AND l.languageCode = dl.languageCode
 AND dl.DriverLicenseNum = d.DriverLicenseNum
 AND dl.DriverLanguageProf = (
-    SELECT MAX(dl2.DriverLanguageProf)
-    FROM driver_language AS dl2
-    WHERE dl2.DriverLicenseNum = d.DriverLicenseNum
+    SELECT MAX(dlsub.DriverLanguageProf)
+    FROM driver_language AS dlsub
+    WHERE dlsub.DriverLicenseNum = d.DriverLicenseNum
 );
 
 /*Q8 For each vehicle type (e.g., Sedan), list the number of future bookings of 

@@ -14,9 +14,7 @@ ORDER BY ClearanceLevel DESC;
 /*Q2 Find the Locations whose city names consist of one or more words, and the 
 last word is four character long ending with a ‘k’. For each such location, 
 display its street number, street name, and city.*/
-SELECT StreetNo AS "Street Number", 
-StreetName AS "Street Name", 
-City
+SELECT CONCAT(StreetNo," ", StreetName, " ", City) AS "Address"
 FROM Location
 WHERE City IS NOT NULL
 AND RIGHT(City, 1) = 'k'

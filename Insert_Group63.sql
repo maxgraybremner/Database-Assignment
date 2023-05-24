@@ -41,22 +41,20 @@ INSERT INTO PASSENGER_VEHICLE(VIN, Pass_seat_capacity)
     ('KMHH351EMNU122345', 5);
 
 
-INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity)
-    VALUES('W1W8ED6Y7LP320845', 71, 4.1),
-    ('JHDFM8JR1XXX10152', 89, 4.5),
-    ('JHDFC2AG1XXX10349', 89, 4.5),
-    ('JHDFC2AG1XXX10594', 89, 4.5),
-    ('MR0HA3CD400387900', 43, 3.2),
-    ('MR0HA3CD400355234', 43, 3.2),
-    ('MR0HA3CD400323564', 43, 3.2);
+INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('W1W8ED6Y7LP320845', 71, 4.1);
+INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('JHDFM8JR1XXX10152', 89, 4.5);
+INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('JHDFC2AG1XXX10349', 89, 4.5);
+INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('JHDFC2AG1XXX10594', 89, 4.5);
+INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('MR0HA3CD400387900', 43, 3.2);
+INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('MR0HA3CD400355234', 43, 3.2);
+INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('MR0HA3CD400323564', 43, 3.2);
 
-INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail)
-    VALUES('WBS3U920X0J966829', 23984, 'm', '2023-06-02', 1163.75, '20,000km inspection'),
-    ('WDF9066352E036011', 18126, 'r', '2023-05-18', 240,'Air-Conditioning is not cold and engine fan full speed'),
-    ('JHDFM8JR1XXX10152', 125684, 'm', '2023-05-29', 831, '125,000km service'),
-    ('JHDFM8JR1XXX10152', 125700, 'r', '2023-06-01', 831, 'investogate shudder when changing gears'),
-    ('MR0HA3CD400355234', 84569, 'r', '2023-05-11', 140, 'Investigate intermittently blowing white smoke while driving on the highway'),
-    ('KMHH351EMNU176947', 32565, 'm', '2023-05-12', 812.2, '30,000km service and an issue during cold start.');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUES('WBS3U920X0J966829', 23984, 'm', '2023-06-02', 1163.75, '20,000km inspection');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUE('WDF9066352E036011', 18126, 'r', '2023-05-18', 240,'Air-Conditioning is not cold and engine fan full speed');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUE('JHDFM8JR1XXX10152', 125684, 'm', '2023-05-29', 831, '125,000km service');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUE('JHDFM8JR1XXX10152', 125700, 'r', '2023-06-01', 831, 'investogate shudder when changing gears');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUE('MR0HA3CD400355234', 84569, 'r', '2023-05-11', 140, 'Investigate intermittently blowing white smoke while driving on the highway');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUE('KMHH351EMNU176947', 32565, 'm', '2023-05-12', 812.2, '30,000km service and an issue during cold start.');
 
 INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('PPQ5I09LZNYU', 'Agnes', 'Wauters', 2, 'n');
 INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('WFU6TKIW97RQ', 'Mitra', 'Brownlow', 3, 'y');

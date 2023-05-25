@@ -47,11 +47,11 @@ INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('
 INSERT INTO CARGO_VEHICLE(VIN, Carg_cfeet_capacity, Carg_tons_capacity) VALUES('MR0HA3CD400323564', 43, 3.2);
 
 INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUES('WBS3U920X0J966829', 23984, 'm', '2023-06-02', 1163.75, '20,000km inspection');
-INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUE('WDF9066352E036011', 18126, 'r', '2023-05-18', 240,'Air-Conditioning is not cold and engine fan full speed');
-INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUE('JHDFM8JR1XXX10152', 125684, 'm', '2023-05-29', 831, '125,000km service');
-INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUE('JHDFM8JR1XXX10152', 125700, 'r', '2023-06-01', 831, 'investogate shudder when changing gears');
-INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUE('MR0HA3CD400355234', 84569, 'r', '2023-05-11', 140, 'Investigate intermittently blowing white smoke while driving on the highway');
-INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUE('KMHH351EMNU176947', 32565, 'm', '2023-05-12', 812.2, '30,000km service and an issue during cold start.');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUES('WDF9066352E036011', 18126, 'r', STR_TO_DATE('18 2023 May', '%d %Y %M'), 240,'Air-Conditioning is not cold and engine fan full speed');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUES('JHDFM8JR1XXX10152', 125684, 'm', STR_TO_DATE('05-29-2023', '%m-%d-%Y'), 831, '125,000km service');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUES('JHDFM8JR1XXX10152', 125700, 'r', STR_TO_DATE('June 1 2023', '%M %d %Y'), 831, 'investogate shudder when changing gears');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUES('MR0HA3CD400355234', 84569, 'r', STR_TO_DATE('11-05-2023', '%d-%m-%Y'), 140, 'Investigate intermittently blowing white smoke while driving on the highway');
+INSERT INTO MAINTENANCE_REPAIR(VIN, OdometerReading, MR_Type, MR_Date, MR_Cost, MR_Detail) VALUES('KMHH351EMNU176947', 32565, 'm', STR_TO_DATE('12 05 2023', '%d %m %Y') , 812.2, '30,000km service and an issue during cold start.');
 
 INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('PPQ5I09LZNYU', 'Agnes', 'Wauters', 2, 'n');
 INSERT INTO DRIVER(DriverLicenseNum, DriverFirstName, DriverLastName, ClearanceLevel, IsAvailable) VALUES('WFU6TKIW97RQ', 'Mitra', 'Brownlow', 3, 'y');
@@ -394,3 +394,4 @@ INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropO
 INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('UZ4B2RHA6U62', '9KY8GJFP', 'es', 1, 6, 'MR0HA3CD400355234', '2023-07-13 5:15:00', '2023-07-13 6:30:00', NULL, NULL, NULL, NULL);
 INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('97E29S93TMUS', 'RQG16IZV', 'es', 5, 2, 'KMHH351EMNU176947', '2023-07-16 15:30:00', '2023-07-16 16:15:00', NULL, NULL, NULL, NULL);
 INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('UZ4B2RHA6U62', '9KY8GJFP', 'es', 1, 6, 'MR0HA3CD400355234', '2023-07-20 5:15:00', '2023-07-20 6:30:00', NULL, NULL, NULL, NULL);
+INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('7NXIYPNVYOHD', 'ND9N4T8L', 'en', 1, 5, 'WBA7T2C02LCD06343', '2023-07-11 16:15:00', '2023-07-11 17:30:00', NULL, NULL, NULL, NULL);

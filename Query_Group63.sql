@@ -119,13 +119,3 @@ AND v.Veh_TypeID = vt.Veh_TypeID
 GROUP BY vt.Veh_TypeID
 HAVING COUNT(*) > 1
 ORDER BY COUNT(*) DESC;
-
-UPDATE TRIP
-SET VIN = 'KMHH351EMNU176947'
-WHERE BookingRefNum > 8;
-
-UPDATE TRIP
-SET VIN = 'KMHH351EMNU176947'
-WHERE BookingRefNum = 7;
-
-INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('7NXIYPNVYOHD', 'ND9N4T8L', 'en', 1, 5, 'WBA7T2C02LCD06343', '2023-07-11 16:15:00', '2023-07-11 17:30:00', NULL, NULL, NULL, NULL);

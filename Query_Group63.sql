@@ -42,7 +42,7 @@ ORDER BY CONCAT(o.OfficialFirstName, ' ', o.OfficialLastName);
 /*Q4 The date on which the most recent Trip(s) was(were) completed. Show the 
 date as well as the vehicle model(s) and type(s) (description) involved in the 
 trip(s). */
-SELECT DATE(t.EndTimeActual) AS 'Most Recent date',
+SELECT DATE_FORMAT(t.EndTimeActual, '%d-%m-%y') AS 'Most Recent date',
        v.Veh_Model AS "Vehicle Model",
        vt.Veh_Type_Description AS "Vehicle Type"
 FROM TRIP AS t, VEHICLE AS v, VEHICLE_TYPE AS vt

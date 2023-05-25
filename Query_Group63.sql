@@ -111,9 +111,21 @@ vehicles if number of future bookings in each type is more than 2. For each
 vehicle type, display the number of bookings. Sort the output in descending 
 order of the number of bookings.*/
 SELECT vt.Veh_Type_Description AS "Vehicle Type",
-COUNT(v.veh_typeid) AS "Number of future booking if more than 2"
-FROM Trip AS t, JOIN vehicle AS v, vehicle_type AS vt
-WHERE t.StartTimeIntended > CURDATE()
-GROUP BY v.veh_typeid
-HAVING COUNT(v.veh_typeid) >= 2
-ORDER BY COUNT(v.veh_typeid) DESC;
+count(*) AS "Num of future trips"
+FROM vehicle_type AS vt, Trip AS t, vehicle AS v
+WHERE t.EndOdometerKM IS NULL
+AND t.VIN = v.VIN
+AND v.Veh_TypeID = vt.Veh_TypeID
+GROUP BY vt.Veh_TypeID
+HAVING COUNT(*) > 1
+ORDER BY COUNT(*) DESC;
+
+UPDATE TRIP
+SET VIN = 'KMHH351EMNU176947'
+WHERE BookingRefNum > 8;
+
+UPDATE TRIP
+SET VIN = 'KMHH351EMNU176947'
+WHERE BookingRefNum = 7;
+
+INSERT INTO TRIP (DriverLicenseNum, OfficialID, LanguageCode, PickUpLocID, DropOffLocID, VIN, StartTimeIntended, EndTimeIntended, StartTimeActual, EndTimeActual, StartOdometerKM, EndOdometerKM) VALUES('7NXIYPNVYOHD', 'ND9N4T8L', 'en', 1, 5, 'WBA7T2C02LCD06343', '2023-07-11 16:15:00', '2023-07-11 17:30:00', NULL, NULL, NULL, NULL);

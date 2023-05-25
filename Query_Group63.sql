@@ -43,12 +43,14 @@ ORDER BY CONCAT(o.OfficialFirstName, ' ', o.OfficialLastName);
 date as well as the vehicle model(s) and type(s) (description) involved in the 
 trip(s). */
 SELECT DATE(t.EndTimeActual) AS 'Most Recent date',
-v.veh_model AS "Vehicle Model",
-vt.Veh_Type_Description AS "Vehicle Type"
-FROM trip AS t, vehicle AS v, vehicle_type AS vt
-WHERE DATE(t.EndTimeActual) = (
+       v.Veh_Model AS "Vehicle Model",
+       vt.Veh_Type_Description AS "Vehicle Type"
+FROM TRIP AS t, VEHICLE AS v, VEHICLE_TYPE AS vt
+WHERE t.VIN = v.VIN
+  AND v.Veh_TypeID = vt.Veh_TypeID
+  AND DATE(t.EndTimeActual) = (
     SELECT MAX(DATE(EndTimeActual))
-    FROM trip
+    FROM TRIP
 );
 
 

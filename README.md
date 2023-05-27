@@ -1,6 +1,24 @@
 # Database-Assignment-
-** please remember to convert the sql files into txt before submission **
 
+** please remember to convert the sql files into txt before submission **
+## Summary 
+Given an ERD and relational databade schema, create 4 txt files.
+- initial database schema
+- Data Insertion
+- 8 queries provided 
+- a specific booking creation 
+
+The data insertion must be made up and inserted via individual INSERT statements
+
+The 8 queries specified by the assignent document are listed in the query document.
+The lecturer specified, only cartesian joins should be used to join data from multiple tables.
+
+There are two parts to the booking creation scenario which have been listed in the booking file.
+
+To host the database, we used the xampp software.
+
+
+## Steps to use xampp in the commandline
 1. Open Xampp Control Panel
 2. Start the 'Apache Module' and the 'MySQL Module'
 3. open Command Line
@@ -9,8 +27,8 @@ cd c:\xmapp\mysql\bin
 
 5. start the mysql CLI using the below command 
 mysql -u root -p
-## the -u means User 
-## the -p means password protected
+### the -u means User 
+### the -p means password protected
 
 6. this account is not password protected so press 'ENTER' when asked for a password
 

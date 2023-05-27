@@ -1,4 +1,5 @@
 /* Insert_Group63.sql */
+/* Each dataset must be input individually  */
 
 USE CTSDB;
 
